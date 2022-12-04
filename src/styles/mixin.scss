@@ -1,0 +1,4 @@
+@mixin auto-grid($minwidth: 100px) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($minwidth, 1fr));
+}
