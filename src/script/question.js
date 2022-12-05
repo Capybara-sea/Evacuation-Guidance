@@ -60,7 +60,7 @@
     button: [
       {
         text: 'button.comfirm',
-        to: 'end',
+        to: 4,
       },
     ],
   },
@@ -97,11 +97,11 @@
     button: [
       {
         text: 'button.yes', // はい
-        to: 7,
+        to: 'end',
       },
       {
         text: 'button.no', // いいえ
-        to: 8,
+        to: 'end',
       },
     ],
   },
