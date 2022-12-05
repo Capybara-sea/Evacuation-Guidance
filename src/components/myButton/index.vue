@@ -1,5 +1,5 @@
 <template>
-  <div class="my-btn-container" :class="[{ disabled }, position]" :style="btnStyle" @click.stop="log">
+  <div class="my-btn-container" :class="[{ disabled }, position]" :style="btnStyle">
     <slot>
       <i18n-box :t="t" :size="size" />
     </slot>
@@ -44,10 +44,6 @@ const props = defineProps({
 })
 
 const btnStyle = computed(() => btnColor(props.color, props.plain, props.dark))
-
-function log(e) {
-  console.log('inner', e)
-}
 </script>
 
 <style lang="scss" scoped>

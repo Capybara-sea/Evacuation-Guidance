@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite'
-import commonjs from 'vite-plugin-commonjs'
 import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -11,7 +10,6 @@ import { fileURLToPath, URL } from 'url'
 export default defineConfig({
   base: '/Evacuation-Guidelines/',
   plugins: [
-    commonjs(),
     vue(),
     AutoImport({
       resolvers: [ElementPlusResolver()],
