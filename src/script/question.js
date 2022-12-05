@@ -12,7 +12,7 @@
  * list: [{ text: string },...]
  */
 
-export default [
+ export default [
   // 1.日本語はわかりますか? (スクリプトの入り口)
   {
     id: 1,
@@ -61,6 +61,47 @@ export default [
       {
         text: 'button.comfirm',
         to: 'end',
+      },
+    ],
+  },
+
+  // 4.何か困っていることはありますか? 
+  {
+    id: 4,
+    type: 'check',
+    content: 'content.4', // 何か困っていることはありますか?
+    button: [
+      {
+        text: 'button.yes', // はい
+        to: 5,
+      },
+      {
+        text: 'button.no', // いいえ
+        to: 6,
+      },
+    ],
+  },
+
+  // 5.何か困っていることはありますか? 
+  {
+    id: 5,
+    type: 'grid',
+    content: ''
+  },
+
+  // 6.欲しいものはありますか? 
+  {
+    id: 6,
+    type: 'check',
+    content: 'content.5', // 欲しいものはありますか?
+    button: [
+      {
+        text: 'button.yes', // はい
+        to: 7,
+      },
+      {
+        text: 'button.no', // いいえ
+        to: 8,
       },
     ],
   },
