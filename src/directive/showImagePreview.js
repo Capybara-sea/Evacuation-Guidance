@@ -39,7 +39,7 @@ const showPrview = {
     function show() {
       const { images, index } = binding.value
       if (!images || images.length == 0) return
-      console.log(images, index)
+      // console.log(images, index)
       showImagePreview({
         images,
         startPosition: index,
