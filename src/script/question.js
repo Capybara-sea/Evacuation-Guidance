@@ -56,8 +56,7 @@ export default [
     id: 3,
     type: 'card',
     content: 'content.3',
-    images: ['images/translation/listen.png',
-      'images/translation/google.png'],
+    images: ['images/translation/listen.png', 'images/translation/google.png'],
     button: [
       {
         text: 'button.comfirm',
@@ -66,7 +65,7 @@ export default [
     ],
   },
 
-  // 4.何か困っていることはありますか? 
+  // 4.何か困っていることはありますか?
   {
     id: 4,
     type: 'check',
@@ -83,59 +82,75 @@ export default [
     ],
   },
 
-  // 5.困っていることlist 
+  // 5.困っていることlist
   {
     id: 5,
     type: 'grid',
     content: 'content.4',
     list: [
       {
-        text: 'list.help.1', 
+        // 食べられないものがあります
+        text: 'list.help.1',
       },
       {
-        text: 'list.help.2', 
+        // 長い間持っている病気があります
+        text: 'list.help.2',
       },
       {
-        text: 'list.help.3', 
+        // 妊娠しています
+        text: 'list.help.3',
       },
       {
-        text: 'list.help.4', 
+        // 障害があります
+        text: 'list.help.4',
       },
       {
-        text: 'list.help.5', 
+        // 体の調子が悪いです
+        text: 'list.help.5',
       },
       {
-        text: 'list.help.6', 
+        // お祈りをしたいです
+        text: 'list.help.6',
       },
       {
-        text: 'list.help.7', 
+        // 授乳をしたいです
+        text: 'list.help.7',
       },
       {
-        text: 'list.help.8', 
+        // 短い間個室を使いたいです
+        text: 'list.help.8',
       },
       {
-        text: 'list.help.9', 
+        // ペットを連'れてきたいです
+        text: 'list.help.9',
       },
       {
-        text: 'list.help.10', 
+        //  Wi-Fiを使いたいです
+        text: 'list.help.10',
       },
       {
-        text: 'list.help.11', 
+        //  携帯電話を充電したいです
+        text: 'list.help.11',
       },
       {
-        text: 'list.help.12', 
+        //  家族に連絡したいです
+        text: 'list.help.12',
       },
       {
-        text: 'list.help.13', 
+        //  大使館に連絡したいです
+        text: 'list.help.13',
       },
       {
-        text: 'list.help.14', 
+        //  すぐに帰国したいです
+        text: 'list.help.14',
       },
       {
-        text: 'list.help.15', 
+        //  移動方法を知りたいです
+        text: 'list.help.15',
       },
       {
-        text: 'list.help.16', 
+        //  外貨両替がいかりょうがえしたいです
+        text: 'list.help.16',
       },
     ],
     button: [
@@ -146,7 +161,7 @@ export default [
     ],
   },
 
-  // 6.欲しいものはありますか? 
+  // 6.欲しいものはありますか?
   {
     id: 6,
     type: 'check',
@@ -170,28 +185,36 @@ export default [
     content: 'content.5',
     list: [
       {
-        text: 'list.need.1', 
+        // 水
+        text: 'list.need.1',
       },
       {
-        text: 'list.need.2', 
+        // 毛布
+        text: 'list.need.2',
       },
       {
-        text: 'list.need.3', 
+        // おむつ
+        text: 'list.need.3',
       },
       {
-        text: 'list.need.4', 
+        // 生理用品
+        text: 'list.need.4',
       },
       {
-        text: 'list.need.5', 
+        // 食べもの
+        text: 'list.need.5',
       },
       {
-        text: 'list.need.6', 
+        // ハラル食品
+        text: 'list.need.6',
       },
       {
-        text: 'list.need.7', 
+        // くすり
+        text: 'list.need.7',
       },
       {
-        text: 'list.need.8', 
+        // ミルク
+        text: 'list.need.8',
       },
     ],
     button: [
