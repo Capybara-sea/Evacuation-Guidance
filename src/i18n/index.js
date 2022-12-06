@@ -12,7 +12,7 @@ const langList = Object.keys(messages)
 
 const i18n = createI18n({
   locale: 'zh-CN',
-  fallbackLocale: 'en-US',
+  fallbackLocale: 'ja-JP',
   legacy: false,
   warnHtmlInMessage: false,
   warnHtmlMessage: false,
