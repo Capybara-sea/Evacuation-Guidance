@@ -1,6 +1,6 @@
 <template>
   <header>
-    <iconfont name="xiangzuo" @click="$router.back()" />
+    <iconfont name="xiangzuo" :class="{ disabled }" @click="$router.back()" />
     <iconfont name="zhuye" @click="$router.push('/')" />
     <iconfont class="right" name="yuyan" @click="showLangPicker = true" />
   </header>
@@ -13,15 +13,20 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import LangPicker from '@/components/langPicker/index.vue'
+import { useStore } from '@/store'
 
 const showLangPicker = ref(false)
+
+const store = useStore()
+const disabled = computed(() => store.currentRouteName == 'home')
 </script>
 
 <style lang="scss" scoped>
 $header-height: 50px;
 $icon-size: 30px;
+$active-icon-bg: rgba(0, 0, 0, 0.15);
 
 @media screen and (min-width: 1200px) {
   header,
@@ -40,10 +45,25 @@ header {
   width: 100vw;
   height: $header-height;
 
+  // top button
   > * {
     margin: calc(($header-height - $icon-size) / 2);
+    transition: all .1s;
+
+    &:active {
+      border-radius: 4px;
+      background: $active-icon-bg;
+      box-shadow: 0 0 1px 2px $active-icon-bg;
+    }
+
     &.right {
       margin-left: auto;
+    }
+
+    // disabled
+    &.disabled {
+      pointer-events: none;
+      filter: grayscale(1) opacity(0.7);
     }
   }
 }
