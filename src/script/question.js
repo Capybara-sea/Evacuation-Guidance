@@ -51,12 +51,13 @@ export default [
     ],
   },
 
-  // 3.翻訳アプリ(参考)
+  // 3.こちらの通訳アプリを参考してください。
   {
     id: 3,
     type: 'card',
     content: 'content.3',
-    images: ['images/question/1.png', 'images/question/2.png'],
+    images: ['images/translation/listen.png',
+      'images/translation/google.png'],
     button: [
       {
         text: 'button.comfirm',
@@ -89,10 +90,52 @@ export default [
     content: 'content.4',
     list: [
       {
-        text: 'list.lang.en', // はい
+        text: 'list.help.1', 
       },
       {
-        text: 'list.lang.zh', // いいえ
+        text: 'list.help.2', 
+      },
+      {
+        text: 'list.help.3', 
+      },
+      {
+        text: 'list.help.4', 
+      },
+      {
+        text: 'list.help.5', 
+      },
+      {
+        text: 'list.help.6', 
+      },
+      {
+        text: 'list.help.7', 
+      },
+      {
+        text: 'list.help.8', 
+      },
+      {
+        text: 'list.help.9', 
+      },
+      {
+        text: 'list.help.10', 
+      },
+      {
+        text: 'list.help.11', 
+      },
+      {
+        text: 'list.help.12', 
+      },
+      {
+        text: 'list.help.13', 
+      },
+      {
+        text: 'list.help.14', 
+      },
+      {
+        text: 'list.help.15', 
+      },
+      {
+        text: 'list.help.16', 
       },
     ],
     button: [
@@ -127,10 +170,28 @@ export default [
     content: 'content.5',
     list: [
       {
-        text: 'list.lang.en', // はい
+        text: 'list.need.1', 
       },
       {
-        text: 'list.lang.zh', // いいえ
+        text: 'list.need.2', 
+      },
+      {
+        text: 'list.need.3', 
+      },
+      {
+        text: 'list.need.4', 
+      },
+      {
+        text: 'list.need.5', 
+      },
+      {
+        text: 'list.need.6', 
+      },
+      {
+        text: 'list.need.7', 
+      },
+      {
+        text: 'list.need.8', 
       },
     ],
     button: [
