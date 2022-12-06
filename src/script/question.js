@@ -149,7 +149,7 @@ export default [
         text: 'list.help.15',
       },
       {
-        //  外貨両替がいかりょうがえしたいです
+        //  外貨両替したいです
         text: 'list.help.16',
       },
     ],
