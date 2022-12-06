@@ -56,7 +56,7 @@ export default [
     id: 3,
     type: 'card',
     content: 'content.3',
-    images: ['/images/question/1.png', '/images/question/2.png'],
+    images: ['images/question/1.png', 'images/question/2.png'],
     button: [
       {
         text: 'button.comfirm',
