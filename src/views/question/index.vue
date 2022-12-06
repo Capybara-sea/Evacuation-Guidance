@@ -4,28 +4,30 @@
       <i18n-box class="content-i18n" :t="cq.content" size="large" />
     </div>
 
-    <!-- <van-swipe class="swipe" :autoplay="3000" indicator-color="white">
-    <van-swipe-item v-for="(item, index) in cq.images" v-showPrview="{ images: cq.images, index }">
-      <van-image :key="item" :src="item" fit="scale-down" height="200px" />
-    </van-swipe-item>
-  </van-swipe> -->
-
-    <van-image
-      v-for="(item, index) in cq.images"
-      v-showPrview="{ images: cq.images, index }"
-      :key="item"
-      :src="item"
-      fit="scale-down"
-      height="200px"
-    />
+    <div class="image-box">
+      <van-image
+        v-for="(item, index) in cq.images"
+        v-showPrview="{ images: cq.images, index }"
+        :key="item"
+        :src="item"
+        fit="scale-down"
+        height="200px"
+      />
+    </div>
 
     <el-divider border-style="dotted" style="margin: 2px 0" />
 
-    <el-checkbox-group v-if="cq.type == 'grid'" v-model="checked" size="small">
+    <!-- <el-checkbox-group v-if="cq.type == 'grid'" v-model="checked" size="small">
       <el-checkbox v-for="item in cq.list" :label="item.text" border>
         <i18n-box class="content-i18n" :t="item.text" />
       </el-checkbox>
-    </el-checkbox-group>
+    </el-checkbox-group> -->
+
+    <my-checkbox-group class="checkbox-group" v-model="checked">
+      <my-checkbox v-for="item in cq.list" :label="item.text">
+        <i18n-box class="content-i18n" :t="item.text" />
+      </my-checkbox>
+    </my-checkbox-group>
 
     <el-row justify="center">
       <el-col class="button-box" :xs="24" :sm="8" :md="6" v-for="item in cq.button">
@@ -38,6 +40,8 @@
 <script setup>
 import { ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import myCheckboxGroup from '@/components/myCheckboxGroup/index.vue'
+import myCheckbox from '@/components/myCheckbox/index.vue'
 import Question from './question'
 
 // currQuestion
@@ -67,6 +71,16 @@ watch(
     font-size: 40px;
     padding: 16px;
   }
+
+  .image-box {
+    box-sizing: border-box;
+  }
+
+  .checkbox-group {
+    @include auto-grid(40vw);
+    gap: 10px;
+  }
+
   .button-box {
     display: flex;
     justify-content: center;
@@ -78,13 +92,4 @@ watch(
     }
   }
 }
-.button-i18n {
-  font-size: 30px;
-}
-:deep(.el-image__inner) {
-  -webkit-user-drag: none;
-}
-// .swipe {
-//   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-// }
 </style>
