@@ -140,8 +140,4 @@ export default [
       },
     ],
   },
-
-
-
-
 ]
