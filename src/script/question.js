@@ -12,7 +12,7 @@
  * list: [{ text: string },...]
  */
 
- export default [
+export default [
   // 1.日本語はわかりますか? (スクリプトの入り口)
   {
     id: 1,
@@ -82,11 +82,25 @@
     ],
   },
 
-  // 5.何か困っていることはありますか? 
+  // 5.困っていることlist 
   {
     id: 5,
     type: 'grid',
-    content: ''
+    content: 'content.4',
+    list: [
+      {
+        text: 'list.lang.en', // はい
+      },
+      {
+        text: 'list.lang.zh', // いいえ
+      },
+    ],
+    button: [
+      {
+        text: 'button.comfirm',
+        to: 6,
+      },
+    ],
   },
 
   // 6.欲しいものはありますか? 
@@ -97,7 +111,7 @@
     button: [
       {
         text: 'button.yes', // はい
-        to: 'end',
+        to: 7,
       },
       {
         text: 'button.no', // いいえ
@@ -105,4 +119,29 @@
       },
     ],
   },
+
+  // 7.欲しいものlist
+  {
+    id: 7,
+    type: 'grid',
+    content: 'content.5',
+    list: [
+      {
+        text: 'list.lang.en', // はい
+      },
+      {
+        text: 'list.lang.zh', // いいえ
+      },
+    ],
+    button: [
+      {
+        text: 'button.comfirm',
+        to: 'end',
+      },
+    ],
+  },
+
+
+
+
 ]
