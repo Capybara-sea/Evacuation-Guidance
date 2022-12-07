@@ -1,9 +1,9 @@
-# Evacuation Guidelines
+# Evacuation Guidance
 
 ## 项目启动
 
 1. 将项目克隆到本地
-   `git clone https://github.com/Capybara-sea/Evacuation-Guidelines.git`
+   `git clone https://github.com/Capybara-sea/Evacuation-Guidance.git`
 
 2. npm包安装
    `npm install`
