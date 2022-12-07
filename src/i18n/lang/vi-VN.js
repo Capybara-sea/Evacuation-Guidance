@@ -1,31 +1,31 @@
 export default {
-    code: 'ko-KR',
-    name: '한국・조선어',
+    code: 'vi-VN',
+    name: 'Tiếng Việt',
     home: {
         // 外国人向け避難誘導
-        question: '외국인을 위한 피난 안내',
+        question: 'Sơ tán người ngoại quốc',
         // 災害時多言語情報
-        info: '재해 시 다국어 정보',
+        info: 'Tài nguyên đa ngôn ngữ',
     },
     content: {
         // 日本語はわかりますか?
-        1: '일본어를 할 줄 압니까?',
+        1: 'Bạn có hiểu tiếng Nhật không?',
         // 何語がわかりますか
-        2: '어떤 언어를 할 줄 압니까?',
+        2: 'Bạn biết ngôn ngữ gì?',
         // 翻訳アプリ(参考)
-        3: '다음 번역 소프트웨어를 참조하십시오.',
+        3: 'Bạn có thể tham khảo phần mềm dịch theo đây.',
         // 何か困っていることはありますか？
-        4: '도와드릴 일 없습니까?',
+        4: 'Bạn có gặp khó khăn gì không?',
         // 欲しいものはありますか？
-        5: '필요하신 거 없습니까?',
+        5: 'Bạn có cần gì không?',
     },
     button: {
         // はい
-        yes: '그래',
+        yes: 'Phải',
         // いいえ
-        no: '아니요',
+        no: 'không',
         // 確認
-        comfirm: '확인',
+        comfirm: 'Xác nhận',
     },
     list: {
         lang: {
@@ -47,55 +47,55 @@ export default {
         },
         help: {
             // 食べられないものがあります
-            1: '못 먹는 음식이 있습니다',
+            1: 'Có một số món tôi không thể ăn được',
             // 長い間持っている病気があります
-            2: '장기간 앓고 있는 지병이 있습니다',
+            2: 'Tôi có bệnh mãn tính',
             // 妊娠しています
-            3: '임신 중입니다',
+            3: 'Tôi đang mang thai',
             // 障害があります
-            4: '장애를 가지고 있습니다',
+            4: 'Tôi bị khuyết tật',
             // 体の調子が悪いです
-            5: '몸 컨디션이 좋지 않습니다',
+            5: 'Tôi thấy trong người không khỏe',
             // お祈りをしたいです
-            6: '기도를 하고 싶습니다',
+            6: 'Tôi muốn cầu nguyện',
             // 授乳をしたいです
-            7: '수유를 하고 싶습니다',
+            7: ' Tôi muốn cho con bú',
             // 短い間個室を使いたいです
-            8: '잠깐 독실을 이용하고 싶습니다 ',
+            8: 'Tôi muốn sử dụng phòng riêng trong chốc lát',
             // ペットを連'れてきたいです
-            9: '애완동물을 데려오고 싶습니다',
+            9: 'Tôi muốn dẫn thú cưng của tôi theo',
             //  Wi-Fiを使いたいです
-            10: 'Wi-Fi를 이용하고 싶습니다',
+            10: 'Tôi muốn sử dụng mạng Wi-Fi',
             //  携帯電話を充電したいです
-            11: '휴대폰을 충전하고 싶습니다',
+            11: 'Tôi muốn sạc điện thoại di động',
             //  家族に連絡したいです
-            12: '가족에게 연락하고 싶습니다',
+            12: 'Tôi muốn liên lạc với gia đình',
             //  大使館に連絡したいです
-            13: '대사관에 연락하고 싶습니다',
+            13: 'Tôi muốn liên lạc với Đại sứ quán',
             //  すぐに帰国したいです
-            14: '바로 귀국하고 싶습니다',
+            14: 'Tôi muốn về nước ngay lập tức',
             //  移動方法を知りたいです
-            15: '이동방법을 알고 싶습니다',
+            15: 'Tôi muốn biết phương thức di chuyển',
             //  外貨両替したいです
-            16: '외화를 바꾸고 싶어요',
+            16: 'Tôi muốn trao đổi tiền tệ',
         },
         need: {
             // 水
-            1: '물',
+            1: 'Nước',
             // 毛布
-            2: '담요',
+            2: 'Chăn',
             // おむつ
-            3: '기저귀',
+            3: 'Bỉm, tã',
             // 生理用品
-            4: '생리용품',
+            4: 'Đồ băng vệ sinh phụ nữ',
             // 食べもの
-            5: '먹을 것',
+            5: 'Đồ ăn',
             // ハラル食品
-            6: '할랄 식품',
+            6: 'Đồ ăn Halal (dành cho người theo Đạo Hồi)',
             // くすり
-            7: '약',
+            7: 'Thuốc',
             // ミルク
-            8: '분유, 액상분유',
+            8: 'Sữa',
         },
     },
 }

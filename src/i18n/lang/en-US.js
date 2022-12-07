@@ -63,7 +63,7 @@ export default {
       // 短い間個室を使いたいです
       8: 'I would like to use a private room for a short time',
       // ペットを連'れてきたいです
-      9: 'I would like to use a private room for a short time',
+      9: 'I would like to bring my pet(s)',
       //  Wi-Fiを使いたいです
       10: 'I would like to use wiﬁ',
       //  携帯電話を充電したいです
