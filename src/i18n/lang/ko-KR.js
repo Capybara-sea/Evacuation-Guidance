@@ -1,5 +1,5 @@
 export default {
-    code: 'ko',
+    code: 'ko-KR',
     name: '한국・조선어',
     home: {
         // 外国人向け避難誘導

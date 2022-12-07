@@ -3,7 +3,7 @@ export default {
   name: '简体中文',
   home: {
     // 外国人向け避難誘導
-    question: '外国人避难指导',
+    question: '外国人避难引导',
     // 災害時多言語情報
     info: '多语言灾害相关情报',
   },
