@@ -3,9 +3,9 @@ export default {
   name: 'English',
   home: {
     // 外国人向け避難誘導
-    question: '外国人向け避難誘導',
+    question: 'Evacuation Guidance for foreigners',
     // 災害時多言語情報
-    info: '災害時多言語情報',
+    info: 'Emergency Multi-language Resources',
   },
   content: {
     // 日本語はわかりますか?
@@ -91,7 +91,7 @@ export default {
       // 食べもの
       5: 'Food',
       // ハラル食品
-      6: 'Food',
+      6: 'Halal food',
       // くすり
       7: 'Medicine',
       // ミルク
