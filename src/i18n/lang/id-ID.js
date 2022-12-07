@@ -29,21 +29,36 @@ export default {
   },
   list: {
     lang: {
-      en: '英語',
-      zh: '中国語(簡体字)',
-      ko: '韓国語',
-      vi: 'ベトナム語',
-      ne: 'ネパール語',
-      tl: 'タガログ語',
-      id: 'インドネシア語',
-      zhTW: '中国語（繁体字）',
-      th: 'タイ語',
-      mm: 'ミャンマー語',
-      es: 'スペイン語',
-      fr: 'フランス語',
-      pt: 'ポルトガル語',
-      ru: 'ロシア語',
-      el: 'その他',
+      // 英語
+      'en-US': 'Bahasa inggris',
+      // 中国語(簡体字)
+      'zh-CN': 'Cina disederhanakan)',
+      // 韓国語
+      'ko-KR': 'Korea',
+      // ベトナム語
+      'vi-VN': 'Orang Vietnam',
+      // ネパール語
+      'ne-NP': 'Nepal',
+      // タガログ語
+      'tl-PH': 'Tagalog',
+      // インドネシア語
+      'id-ID': 'bahasa Indonesia',
+      // 中国語（繁体字）
+      'zh-TW': 'Cina tradisional)',
+      // タイ語
+      'th-TH': 'Thai',
+      // ミャンマー語
+      'my-MM': 'Myanmar',
+      // スペイン語
+      'es-ES': 'Orang Spanyol',
+      // フランス語
+      'fr-FR': 'Perancis',
+      // ポルトガル語
+      'pt-PT': 'Portugis',
+      // ロシア語
+      'ru-RU': 'Rusia',
+      // その他
+      el: 'orang lain',
     },
     help: {
       // 食べられないものがあります

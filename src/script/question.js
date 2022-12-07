@@ -36,12 +36,21 @@ export default [
     type: 'grid',
     content: 'content.2',
     list: [
-      {
-        text: 'list.lang.en', // はい
-      },
-      {
-        text: 'list.lang.zh', // いいえ
-      },
+      { text: 'list.lang.en-US' }, // 英語
+      { text: 'list.lang.zh-CN' }, // 中国語(簡体字)
+      { text: 'list.lang.ko-KR' }, // 韓国語
+      { text: 'list.lang.vi-VN' }, // ベトナム語
+      { text: 'list.lang.ne-NP' }, // ネパール語
+      { text: 'list.lang.tl-PH' }, // タガログ語
+      { text: 'list.lang.id-ID' }, // インドネシア語
+      { text: 'list.lang.zh-TW' }, // 中国語（繁体字）
+      { text: 'list.lang.th-TH' }, // タイ語
+      { text: 'list.lang.my-MM' }, // ミャンマー語
+      { text: 'list.lang.es-ES' }, // スペイン語
+      { text: 'list.lang.fr-FR' }, // フランス語
+      { text: 'list.lang.pt-PT' }, // ポルトガル語
+      { text: 'list.lang.ru-RU' }, // ロシア語
+      { text: 'list.lang.el' },    // その他
     ],
     button: [
       {
