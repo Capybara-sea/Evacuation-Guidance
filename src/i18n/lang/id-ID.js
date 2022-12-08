@@ -30,13 +30,13 @@ export default {
   list: {
     lang: {
       // 英語
-      'en-US': 'Bahasa inggris',
+      'en-US': 'Inggris',
       // 中国語(簡体字)
-      'zh-CN': 'Cina disederhanakan)',
+      'zh-CN': 'Cina Sederhana',
       // 韓国語
       'ko-KR': 'Korea',
       // ベトナム語
-      'vi-VN': 'Orang Vietnam',
+      'vi-VN': 'Vietnam',
       // ネパール語
       'ne-NP': 'Nepal',
       // タガログ語
@@ -44,7 +44,7 @@ export default {
       // インドネシア語
       'id-ID': 'bahasa Indonesia',
       // 中国語（繁体字）
-      'zh-TW': 'Cina tradisional)',
+      'zh-TW': 'Cina Tradisional)',
       // タイ語
       'th-TH': 'Thai',
       // ミャンマー語

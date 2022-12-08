@@ -30,19 +30,19 @@ export default {
     list: {
         lang: {
             // 英語
-            'en-US': 'English',
+            'en-US': 'Ingles',
             // 中国語(簡体字)
             'zh-CN': 'Simplified Chinese',
             // 韓国語
-            'ko-KR': 'Korean',
+            'ko-KR': 'Koreano',
             // ベトナム語
             'vi-VN': 'Vietnamese',
             // ネパール語
-            'ne-NP': 'Nepali',
+            'ne-NP': 'NepaliName',
             // タガログ語
             'tl-PH': 'Tagalog',
             // インドネシア語
-            'id-ID': 'Indonesian',
+            'id-ID': 'Indonezia',
             // 中国語（繁体字）
             'zh-TW': 'Traditional Chinese',
             // タイ語
@@ -56,9 +56,9 @@ export default {
             // ポルトガル語
             'pt-PT': 'Portuguese',
             // ロシア語
-            'ru-RU': 'Russian',
+            'ru-RU': 'Ruso',
             // その他
-            el: 'others',
+            el: 'iba',
         },
         help: {
             // 食べられないものがあります

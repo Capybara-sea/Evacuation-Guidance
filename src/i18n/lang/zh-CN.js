@@ -25,7 +25,7 @@ export default {
     // いいえ
     no: '否',
     // 確認
-    comfirm: '确认',
+    confirm: '确认',
   },
   list: {
     lang: {
@@ -56,7 +56,7 @@ export default {
       // ポルトガル語˝
       'pt-PT': '葡萄牙语',
       // ロシア語˝
-      'ru-RU': '俄罗斯',
+      'ru-RU': '俄语',
       // その他˝
       el: '其他语言',
     },
