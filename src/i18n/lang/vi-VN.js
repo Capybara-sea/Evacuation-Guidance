@@ -1,6 +1,9 @@
 export default {
+  // 言語コード
   code: 'vi-VN',
+  // 言語の名前
   name: 'Tiếng Việt',
+  
   home: {
     // 外国人向け避難誘導
     question: 'Sơ tán người ngoại quốc',
@@ -25,7 +28,7 @@ export default {
     // いいえ
     no: 'không',
     // 確認
-    comfirm: 'Xác nhận',
+    confirm: 'Xác nhận',
   },
   list: {
     lang: {

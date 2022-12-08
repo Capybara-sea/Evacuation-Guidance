@@ -1,6 +1,9 @@
 export default {
+  // 言語コード
   code: 'en-US',
+  // 言語の名前
   name: 'English',
+
   home: {
     // 外国人向け避難誘導
     question: 'Evacuation Guidance for foreigners',

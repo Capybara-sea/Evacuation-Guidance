@@ -1,8 +1,11 @@
 const $ = (a, b) => `<ruby>${a}<rt>${b}</rt></ruby>`
 
 export default {
+  // 言語コード
   code: 'ja-JP',
+  // 言語の名前
   name: $('日本語', 'にほんご'),
+
   home: {
     // 外国人向け避難誘導
     question: '外国人向け避難誘導',
@@ -27,7 +30,7 @@ export default {
     // いいえ
     no: 'いいえ',
     // 確認
-    comfirm: $('確認', 'かくにん'),
+    confirm: $('確認', 'かくにん'),
   },
   list: {
     lang: {

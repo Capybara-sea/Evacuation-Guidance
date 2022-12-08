@@ -1,6 +1,9 @@
 export default {
+  // 言語コード
   code: 'zh-CN',
+  // 言語の名前
   name: '简体中文',
+  
   home: {
     // 外国人向け避難誘導
     question: '外国人避难引导',

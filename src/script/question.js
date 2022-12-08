@@ -54,7 +54,7 @@ export default [
     ],
     button: [
       {
-        text: 'button.comfirm',
+        text: 'button.confirm',
         to: 3,
       },
     ],
@@ -68,7 +68,7 @@ export default [
     images: ['images/translation/listen.png', 'images/translation/google.png'],
     button: [
       {
-        text: 'button.comfirm',
+        text: 'button.confirm',
         to: 4,
       },
     ],
@@ -164,7 +164,7 @@ export default [
     ],
     button: [
       {
-        text: 'button.comfirm',
+        text: 'button.confirm',
         to: 6,
       },
     ],
@@ -228,7 +228,7 @@ export default [
     ],
     button: [
       {
-        text: 'button.comfirm',
+        text: 'button.confirm',
         to: 'end',
       },
     ],

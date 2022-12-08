@@ -25,7 +25,7 @@ export default {
     // いいえ
     no: 'Tidak',
     // 確認
-    comfirm: 'konfirmasi',
+    confirm: 'konfirmasi',
   },
   list: {
     lang: {

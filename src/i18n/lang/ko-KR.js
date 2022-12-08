@@ -1,6 +1,9 @@
 export default {
+  // 言語コード
   code: 'ko-KR',
+  // 言語の名前
   name: '한국・조선어',
+
   home: {
     // 外国人向け避難誘導
     question: '외국인을 위한 피난 안내',
@@ -25,7 +28,7 @@ export default {
     // いいえ
     no: '아니요',
     // 確認
-    comfirm: '확인',
+    confirm: '확인',
   },
   list: {
     lang: {

@@ -1,6 +1,9 @@
 export default {
+  // 言語コード
   code: 'ne-NP',
+  // 言語の名前
   name: 'नेपाल भासा',
+  
   home: {
     // 外国人向け避難誘導
     question: 'विदेशीहरूका लागि मार्गदर्शन',
@@ -25,7 +28,7 @@ export default {
     // いいえ
     no: 'होइन',
     // 確認
-    comfirm: 'निश्चित गर्नुहोस्',
+    confirm: 'निश्चित गर्नुहोस्',
   },
   list: {
     lang: {
