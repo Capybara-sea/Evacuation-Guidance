@@ -25,7 +25,7 @@ export default {
     // いいえ
     no: 'No',
     // 確認
-    comfirm: 'Comfirm',
+    confirm: 'Confirm',
   },
   list: {
     lang: {
