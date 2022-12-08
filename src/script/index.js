@@ -3,6 +3,7 @@ import question from './question'
 // Image url processing
 question.forEach((item) => {
   item.images &&= item.images.map((img) => import.meta.env.BASE_URL + img)
+  item.list && item.list.forEach((listItem) => (listItem.image &&= import.meta.env.BASE_URL + listItem.image))
 })
 
 export default {

@@ -50,7 +50,7 @@ export default [
       { text: 'list.lang.fr-FR' }, // フランス語
       { text: 'list.lang.pt-PT' }, // ポルトガル語
       { text: 'list.lang.ru-RU' }, // ロシア語
-      { text: 'list.lang.el' },    // その他
+      { text: 'list.lang.el' }, // その他
     ],
     button: [
       {
@@ -196,34 +196,42 @@ export default [
       {
         // 水
         text: 'list.need.1',
+        image: 'images/needs/water.png',
       },
       {
         // 毛布
         text: 'list.need.2',
+        image: 'images/needs/blanket.png',
       },
       {
         // おむつ
         text: 'list.need.3',
+        image: 'images/needs/diapers.png',
       },
       {
         // 生理用品
         text: 'list.need.4',
+        image: 'images/needs/sanitary_pads.png',
       },
       {
         // 食べもの
         text: 'list.need.5',
+        image: 'images/needs/food.png',
       },
       {
         // ハラル食品
         text: 'list.need.6',
+        image: 'images/needs/halal_food.png',
       },
       {
         // くすり
         text: 'list.need.7',
+        image: 'images/needs/medicine.png',
       },
       {
         // ミルク
         text: 'list.need.8',
+        image: 'images/needs/milk.png',
       },
     ],
     button: [

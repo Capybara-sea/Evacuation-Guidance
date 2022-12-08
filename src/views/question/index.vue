@@ -23,9 +23,13 @@
       </el-checkbox>
     </el-checkbox-group> -->
 
-    <my-checkbox-group class="checkbox-group" v-model="checked">
-      <my-checkbox v-for="item in cq.list" :label="item.text">
-        <i18n-box class="content-i18n" :t="item.text" />
+    <my-checkbox-group v-if="cq.type == 'grid'" class="checkbox-group" v-model="checked">
+      <my-checkbox v-for="item in cq.list" class="checkbox-group-item" :label="item.text" v-slot="{ checked }">
+        <my-button class="button" plain :color="checked ? '#67c23a' : '#606266'">
+          <van-image v-if="item.image" :src="item.image" fit="scale-down" height="100px" />
+          <i18n-box class="content-i18n" :t="item.text" />
+          <iconfont :name="checked ? 'select-fill' : 'select'" />
+        </my-button>
       </my-checkbox>
     </my-checkbox-group>
 
@@ -64,12 +68,13 @@ watch(
 </script>
 
 <style lang="scss" scoped>
+$container-padding: 16px;
 .container {
   width: 100%;
   min-height: 100%;
   .content {
     font-size: 40px;
-    padding: 16px;
+    padding: $container-padding;
   }
 
   .image-box {
@@ -77,8 +82,13 @@ watch(
   }
 
   .checkbox-group {
-    @include auto-grid(40vw);
+    padding: $container-padding;
+    @include auto-grid(50vw);
     gap: 10px;
+
+    &-item {
+      height: fit-content;
+    }
   }
 
   .button-box {

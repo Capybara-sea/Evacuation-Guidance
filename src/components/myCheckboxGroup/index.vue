@@ -1,6 +1,5 @@
 <template>
   <div class="my-checkbox-group-container">
-    <!-- checkbox-group modelValue {{ modelValue }} checkList {{ checkList }} -->
     <slot> </slot>
   </div>
 </template>
@@ -13,11 +12,12 @@ const props = defineProps(['modelValue'])
 const emit = defineEmits(['update:modelValue'])
 
 // define checkList
-const defaultModelValue = (() => {
-  const e = props.modelValue
-  return Array.isArray(e) ? e : []
-})()
-const checkList = ref(defaultModelValue)
+const checkList = ref(
+  (() => {
+    const e = props.modelValue
+    return Array.isArray(e) ? e : []
+  })(),
+)
 
 function onChange(check) {
   const index = checkList.value.indexOf(check)

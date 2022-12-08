@@ -1,7 +1,6 @@
 <template>
   <div class="my-checkbox-container" @click="onClick">
-    {{ isChecked }}
-    <slot>{{ label }}</slot>
+    <slot :checked="isChecked">{{ label }}</slot>
   </div>
 </template>
 
@@ -40,9 +39,4 @@ const isChecked = computed(() => {
 </script>
 
 <style lang="scss" scoped>
-.my-checkbox-container {
-  border: 1px #000 solid;
-  border-radius: 4px;
-  background: skyblue;
-}
 </style>
