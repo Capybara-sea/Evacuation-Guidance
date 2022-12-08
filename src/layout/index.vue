@@ -1,8 +1,8 @@
 <template>
   <header>
-    <iconfont name="xiangzuo" :class="{ disabled }" @click="$router.back()" />
-    <iconfont name="zhuye" @click="$router.push('/')" />
-    <iconfont class="right" name="yuyan" @click="showLangPicker = true" />
+    <iconfont name="left-arrow" :class="{ disabled }" @click="$router.back()" />
+    <iconfont name="home" @click="$router.push('/')" />
+    <iconfont class="right" name="language" @click="showLangPicker = true" />
   </header>
 
   <main><slot /></main>
