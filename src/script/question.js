@@ -100,66 +100,82 @@ export default [
       {
         // 食べられないものがあります
         text: 'list.help.1',
+        image: 'images/worries/cannot_eat.png',
       },
       {
         // 長い間持っている病気があります
         text: 'list.help.2',
+        image: 'images/worries/sick.png',
       },
       {
         // 妊娠しています
         text: 'list.help.3',
+        image: 'images/worries/pregnant.png',
       },
       {
         // 障害があります
         text: 'list.help.4',
+        image: 'images/worries/disability.png',
       },
       {
         // 体の調子が悪いです
         text: 'list.help.5',
+        image: 'images/worries/feel_bad.png',
       },
       {
         // お祈りをしたいです
         text: 'list.help.6',
+        image: 'images/worries/pray.png',
       },
       {
         // 授乳をしたいです
         text: 'list.help.7',
+        image: 'images/worries/baby.png',
       },
       {
         // 短い間個室を使いたいです
         text: 'list.help.8',
+        image: 'images/worries/private_room.png',
       },
       {
         // ペットを連'れてきたいです
         text: 'list.help.9',
+        image: 'images/worries/pet.png',
       },
       {
         //  Wi-Fiを使いたいです
         text: 'list.help.10',
+        image: 'images/worries/wifi.png',
       },
       {
         //  携帯電話を充電したいです
         text: 'list.help.11',
+        image: 'images/worries/charge.png',
       },
       {
         //  家族に連絡したいです
         text: 'list.help.12',
+        image: 'images/worries/contact.png',
       },
       {
         //  大使館に連絡したいです
         text: 'list.help.13',
+        image: 'images/worries/embassy.png',
       },
       {
         //  すぐに帰国したいです
         text: 'list.help.14',
+        image: 'images/worries/back_to_country.png',
       },
       {
         //  移動方法を知りたいです
         text: 'list.help.15',
+        image: 'images/worries/transportation.png',
       },
       {
         //  外貨両替したいです
         text: 'list.help.16',
+        image: 'images/worries/change_money.png',
       },
     ],
     button: [
