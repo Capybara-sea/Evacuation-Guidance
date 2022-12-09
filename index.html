@@ -15,6 +15,23 @@
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta http-equiv="x-ua-compatible" content="IE=edge" />
   <title>外国人向け避難誘導</title>
+  <script>
+    (function () {
+      if (location.search) {
+        var params = {};
+        location.search
+          .replace(/^\?/, '')
+          .split('&')
+          .forEach(s => {
+            var v = s.split('=');
+            params[v[0]] = v[1];
+          });
+        if (params.page) {
+          history.replaceState(null, null, decodeURIComponent(params.page));
+        }
+      }
+    })();
+  </script>
 </head>
 
 <body>

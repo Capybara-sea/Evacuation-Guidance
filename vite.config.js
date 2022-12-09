@@ -5,6 +5,7 @@ import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import { VantResolver } from 'unplugin-vue-components/resolvers'
 import { fileURLToPath, URL } from 'url'
+import { resolve } from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -32,5 +33,13 @@ export default defineConfig({
   },
   server: {
     host: '0.0.0.0',
+  },
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        error: resolve(__dirname, '404.html'),
+      },
+    },
   },
 })
