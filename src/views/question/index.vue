@@ -17,18 +17,12 @@
 
     <el-divider border-style="dotted" style="margin: 2px 0" />
 
-    <!-- <el-checkbox-group v-if="cq.type == 'grid'" v-model="checked" size="small">
-      <el-checkbox v-for="item in cq.list" :label="item.text" border>
-        <i18n-box class="content-i18n" :t="item.text" />
-      </el-checkbox>
-    </el-checkbox-group> -->
-
     <my-checkbox-group v-if="cq.type == 'grid'" class="checkbox-group" v-model="checked">
       <my-checkbox v-for="item in cq.list" class="checkbox-group-item" :label="item.text" v-slot="{ checked }">
         <my-button class="button" plain :color="checked ? '#67c23a' : '#606266'">
-          <van-image v-if="item.image" :src="item.image" fit="scale-down" height="100px" />
-          <i18n-box class="content-i18n" :t="item.text" />
-          <iconfont :name="checked ? 'select-fill' : 'select'" />
+          <van-image class="image" v-if="item.image" :src="item.image" fit="scale-down" radius="8px" />
+          <i18n-box class="i18n-box" :t="item.text" />
+          <iconfont class="select-icon" :name="checked ? 'select-fill' : 'select'" size="140%"/>
         </my-button>
       </my-checkbox>
     </my-checkbox-group>
@@ -69,6 +63,7 @@ watch(
 
 <style lang="scss" scoped>
 $container-padding: 16px;
+$list-image-size: 80px;
 .container {
   width: 100%;
   min-height: 100%;
@@ -88,6 +83,30 @@ $container-padding: 16px;
 
     &-item {
       height: fit-content;
+
+      .button {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto 1fr 30px;
+        grid-template-areas: 'image i18n icon';
+        gap: 10px;
+        align-items: center;
+        justify-items: center;
+
+        .image {
+          grid-area: image;
+          width: $list-image-size;
+        }
+
+        .i18n-box {
+          grid-area: i18n;
+          height: fit-content;
+        }
+
+        .select-icon {
+          grid-area: icon;
+        }
+      }
     }
   }
 

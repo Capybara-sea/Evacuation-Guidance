@@ -32,7 +32,7 @@ const i18n = reactive(useI18n())
   height: 100%;
   padding: 20px;
 
-  @include auto-grid(30%);
+  @include auto-grid(40%);
   @media screen and (min-width: 900px) {
     @include auto-grid(10%);
   }
