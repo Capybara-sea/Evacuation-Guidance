@@ -15,8 +15,6 @@
 <script setup>
 import layout from '@/layout/index.vue'
 
-// import Question from './views/question/index.vue'
-
 // let speech = new SpeechSynthesisUtterance()
 // speech.text = '测试文字'
 // speech.pitch = 1 // 设置话语的音调(0-2 默认1，值越大越尖锐,越低越低沉)
