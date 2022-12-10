@@ -1,21 +1,21 @@
 <template>
   <svg :class="svgClass" :style="svgStyle" aria-hidden="true">
-    <use :xlink:href="iconClassName" :fill="color" />
+    <use :href="symbolId" :fill="color" />
   </svg>
 </template>
 
 <script setup>
 import { computed } from 'vue'
 const props = defineProps({
+  prefix: { type: String, default: 'icon' },
   name: { type: String, required: true },
   size: { type: String, default: '' },
   className: { type: String, default: '' },
   color: { type: String, default: '#409eff' },
 })
 
-const iconClassName = computed(() => {
-  return `#${props.name}`
-})
+const symbolId = computed(() => `#${props.prefix}-${props.name}`)
+
 const svgClass = computed(() => {
   if (props.className) {
     return `svg-icon ${props.className}`

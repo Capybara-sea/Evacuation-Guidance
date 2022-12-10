@@ -1,8 +1,8 @@
 <template>
   <header>
-    <iconfont name="left-arrow" :class="{ disabled }" @click="$router.back()" />
-    <iconfont name="home" @click="$router.push('/')" />
-    <iconfont class="right" name="language" @click="showLangPicker = true" />
+    <svg-icon name="left-arrow" :class="{ disabled }" @click="$router.back()" />
+    <svg-icon name="home" @click="$router.push('/')" />
+    <svg-icon class="right" name="language" @click="showLangPicker = true" />
   </header>
 
   <main><slot /></main>

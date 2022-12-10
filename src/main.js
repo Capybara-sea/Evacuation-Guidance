@@ -6,7 +6,6 @@ import components from './components'
 import router from './router'
 import directive from './directive'
 import '@vant/touch-emulator'
-import './assets/iconfont'
 
 const app = createApp(App)
 const pinia = createPinia()

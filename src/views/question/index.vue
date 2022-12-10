@@ -22,7 +22,7 @@
         <my-button class="button" plain :color="checked ? '#67c23a' : '#606266'">
           <van-image class="image" v-if="item.image" :src="item.image" fit="scale-down" radius="8px" />
           <i18n-box class="i18n-box" :t="item.text" />
-          <iconfont class="select-icon" :name="checked ? 'select-fill' : 'select'" size="140%"/>
+          <svg-icon class="select-icon" :name="checked ? 'select-fill' : 'select'" size="140%" />
         </my-button>
       </my-checkbox>
     </my-checkbox-group>
@@ -72,9 +72,9 @@ $list-image-size: 80px;
     padding: $container-padding;
   }
 
-  .image-box {
-    box-sizing: border-box;
-  }
+  // .image-box {
+  //   box-sizing: border-box;
+  // }
 
   .checkbox-group {
     padding: $container-padding;
@@ -95,6 +95,7 @@ $list-image-size: 80px;
 
         .image {
           grid-area: image;
+          min-width: $list-image-size;
           width: $list-image-size;
         }
 
