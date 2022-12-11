@@ -11,11 +11,9 @@
   },
   "dependencies": {
     "@ctrl/tinycolor": "^3.4.1",
-    "@vant/touch-emulator": "^1.4.0",
     "element-plus": "^2.2.23",
     "lodash": "^4.17.21",
     "pinia": "^2.0.27",
-    "vant": "^4.0.0",
     "vue": "^3.2.41",
     "vue-i18n": "^9.3.0-beta.10",
     "vue-router": "^4.1.6"

@@ -2,14 +2,6 @@
   <layout>
     <router-view></router-view>
   </layout>
-
-  <!-- 
-  You must have to import it in advance! 
-  Because if you don't do this it will 
-  cause the import of the CSS required 
-  for the component to fail! 
-  -->
-  <van-image-preview />
 </template>
 
 <script setup>

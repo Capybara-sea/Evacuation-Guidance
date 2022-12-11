@@ -5,9 +5,9 @@
     </div>
 
     <div class="image-box">
-      <div class="image" v-for="(item, index) in cq.images" :key="item.url">
-        <van-image v-showPrview="{ images: cq.images.map(({ url }) => url), index }" :src="item.url" fit="scale-down" />
-        <div class="description">{{ item.description }}</div>
+      <div class="image-item" v-for="(item, index) in cq.images" :key="item.url">
+        <img :src="item.url" fit="scale-down" :alt="item.description" :title="item.description" />
+        <i18n-box v-if="item.description" class="description" :t="item.description" size="small" />
       </div>
     </div>
 
@@ -16,7 +16,8 @@
     <my-checkbox-group v-if="cq.type == 'grid'" class="checkbox-group" v-model="checked">
       <my-checkbox v-for="item in cq.list" class="checkbox-group-item" :label="item.text" v-slot="{ checked }">
         <my-button class="button" plain :color="checked ? '#67c23a' : '#606266'">
-          <van-image class="image" v-if="item.image" :src="item.image" fit="scale-down" radius="8px" />
+          <!-- <van-image class="image" v-if="item.image" :src="item.image" fit="scale-down" radius="8px" /> -->
+          <img class="image" v-if="item.image" :src="item.image" fit="scale-down" />
           <i18n-box class="i18n-box" :t="item.text" />
           <svg-icon class="select-icon" :name="checked ? 'select-fill' : 'select'" size="140%" />
         </my-button>
@@ -71,15 +72,19 @@ $list-image-size: 80px;
   }
 
   .image-box {
-    .image {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      .van-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    .image-item {
+      img {
+        width: 100%;
+        // max-height: 200px;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
       }
       .description {
+        margin: 4px;
+        text-align: center;
       }
     }
   }
@@ -105,6 +110,7 @@ $list-image-size: 80px;
           grid-area: image;
           min-width: $list-image-size;
           width: $list-image-size;
+          border-radius: 8px;
         }
 
         .i18n-box {

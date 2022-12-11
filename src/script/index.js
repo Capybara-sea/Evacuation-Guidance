@@ -4,7 +4,6 @@ import question from './question'
 question.forEach((item) => {
   item.images && item.images.forEach((img, i) => (item.images[i].url = import.meta.env.BASE_URL + img.url))
   item.list && item.list.forEach((listItem) => (listItem.image &&= import.meta.env.BASE_URL + listItem.image))
-  console.log(item)
 })
 
 export default {

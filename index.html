@@ -4,33 +4,39 @@
 <head>
   <meta charset="UTF-8" />
   <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+  <title>外国人向け避難誘導</title>
   <meta name="viewport" content="viewport-fit=cover" />
-  <meta name="apple-mobile-web-app-capable " content="yes ">
+  <meta name="apple-mobile-web-app-capable " content="yes " />
   <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, user-scalable=0, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    content="width=device-width, initial-scale=1.0, user-scalable=0, initial-scale=1, minimum-scale=1, maximum-scale=1" />
   <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta http-equiv="x-ua-compatible" content="IE=edge" />
-  <title>外国人向け避難誘導</title>
+  <style>
+    body {
+      margin: 0;
+      border: 0;
+    }
+  </style>
   <script>
-    (function () {
+    ; (function () {
       if (location.search) {
-        var params = {};
+        var params = {}
         location.search
           .replace(/^\?/, '')
           .split('&')
-          .forEach(s => {
-            var v = s.split('=');
-            params[v[0]] = v[1];
-          });
+          .forEach((s) => {
+            var v = s.split('=')
+            params[v[0]] = v[1]
+          })
         if (params.page) {
-          history.replaceState(null, null, decodeURIComponent(params.page));
+          history.replaceState(null, null, decodeURIComponent(params.page))
         }
       }
-    })();
+    })()
   </script>
 </head>
 
