@@ -7,7 +7,7 @@
  * id: number
  * type: card | check | grid
  * content: string
- * image: [string, ...] (base: assets/)
+ * image: [string, ...] (base: public/)
  * button: [{ text: string, to: id },...]
  * list: [{ text: string },...]
  */
@@ -65,7 +65,10 @@ export default [
     id: 3,
     type: 'card',
     content: 'content.3',
-    images: ['images/translation/listen.png', 'images/translation/google.png'],
+    images: [
+      { url: 'images/translation/listen.png' },
+      { url: 'images/translation/google.png', description: 'image.google' },
+    ],
     button: [
       {
         text: 'button.confirm',

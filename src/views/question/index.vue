@@ -5,14 +5,10 @@
     </div>
 
     <div class="image-box">
-      <van-image
-        v-for="(item, index) in cq.images"
-        v-showPrview="{ images: cq.images, index }"
-        :key="item"
-        :src="item"
-        fit="scale-down"
-        height="200px"
-      />
+      <div class="image" v-for="(item, index) in cq.images" :key="item.url">
+        <van-image v-showPrview="{ images: cq.images.map(({ url }) => url), index }" :src="item.url" fit="scale-down" />
+        <div class="description">{{ item.description }}</div>
+      </div>
     </div>
 
     <el-divider border-style="dotted" style="margin: 2px 0" />
@@ -64,17 +60,29 @@ watch(
 <style lang="scss" scoped>
 $container-padding: 16px;
 $list-image-size: 80px;
+
 .container {
   width: 100%;
   min-height: 100%;
+
   .content {
     font-size: 40px;
     padding: $container-padding;
   }
 
-  // .image-box {
-  //   box-sizing: border-box;
-  // }
+  .image-box {
+    .image {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      .van-image {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+      }
+      .description {
+      }
+    }
+  }
 
   .checkbox-group {
     padding: $container-padding;
