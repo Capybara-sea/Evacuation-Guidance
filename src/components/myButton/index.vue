@@ -50,7 +50,7 @@ const btnStyle = computed(() => btnColor(props.color, props.plain, props.dark))
 .my-btn-container {
   padding: 8px;
   border-radius: 8px;
-  user-select: none;
+  @include not-select;
   cursor: pointer;
   transition: all 0.1s;
 
@@ -72,29 +72,27 @@ const btnStyle = computed(() => btnColor(props.color, props.plain, props.dark))
   }
 
   // theme
-  color: var(--my-button-text-color);
-  background: var(--my-button-bg-color);
-  border: 1px var(--my-button-border-color) solid;
+  @mixin btn-theme($text, $bg, $border) {
+    color: var($text);
+    background: var($bg);
+    border: 1px var($border) solid;
+  }
+  
+  @include btn-theme(--mb-text-color, --mb-bg-color, --mb-border-color);
 
   @media (any-hover: hover) {
     &:hover {
-      color: var(--my-button-hover-text-color);
-      background: var(--my-button-hover-bg-color);
-      border: 1px var(--my-button-hover-border-color) solid;
+      @include btn-theme(--mb-hover-text-color, --mb-hover-bg-color, --mb-hover-border-color);
     }
   }
 
   &:active {
-    color: var(--my-button-active-text-color);
-    background: var(--my-button-active-bg-color);
-    border: 1px var(--my-button-active-border-color) solid;
+    @include btn-theme(--mb-active-text-color, --mb-active-bg-color, --mb-active-border-color);
   }
 
   &.disabled {
     pointer-events: none;
-    color: var(--my-button-disabled-text-color);
-    background: var(--my-button-disabled-bg-color);
-    border: 1px var(--my-button-disabled-border-color) solid;
+    @include btn-theme(--mb-disabled-text-color, --mb-disabled-bg-color, --mb-disabled-border-color);
   }
 }
 </style>

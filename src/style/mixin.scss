@@ -1,0 +1,19 @@
+@mixin auto-grid($minwidth: 100px) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($minwidth, 1fr));
+}
+
+@mixin not-select {
+  -webkit-touch-callout: none;
+  /*系统默认菜单被禁用 iOS Safari*/
+  -webkit-user-select: none;
+  /*webkit浏览器 Chrome/Safari/Opera*/
+  -khtml-user-select: none;
+  /*早期浏览器 Konqueror*/
+  -moz-user-select: none;
+  /*火狐 Firefox*/
+  -ms-user-select: none;
+  /*IE10 Internet Explorer/Edge*/
+  user-select: none;
+  /* Non-prefixed version, currently not supported by any browser */
+}

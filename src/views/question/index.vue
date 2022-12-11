@@ -4,10 +4,15 @@
       <i18n-box class="content-i18n" :t="cq.content" size="large" />
     </div>
 
-    <div class="image-box">
+    <div class="image-box" v-viewer>
       <div class="image-item" v-for="(item, index) in cq.images" :key="item.url">
-        <img :src="item.url" fit="scale-down" :alt="item.description" :title="item.description" />
-        <i18n-box v-if="item.description" class="description" :t="item.description" size="small" />
+        <img
+          fit="scale-down"
+          :src="item.url"
+          :alt="item.description && $t(item.description)"
+          :title="item.description && $t(item.description)"
+        />
+        <!-- <i18n-box v-if="item.description" class="description" :t="item.description" size="small" /> -->
       </div>
     </div>
 
@@ -16,7 +21,6 @@
     <my-checkbox-group v-if="cq.type == 'grid'" class="checkbox-group" v-model="checked">
       <my-checkbox v-for="item in cq.list" class="checkbox-group-item" :label="item.text" v-slot="{ checked }">
         <my-button class="button" plain :color="checked ? '#67c23a' : '#606266'">
-          <!-- <van-image class="image" v-if="item.image" :src="item.image" fit="scale-down" radius="8px" /> -->
           <img class="image" v-if="item.image" :src="item.image" fit="scale-down" />
           <i18n-box class="i18n-box" :t="item.text" />
           <svg-icon class="select-icon" :name="checked ? 'select-fill' : 'select'" size="140%" />
