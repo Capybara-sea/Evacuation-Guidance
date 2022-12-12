@@ -7,12 +7,11 @@
     <div class="image-box" v-viewer>
       <div class="image-item" v-for="(item, index) in cq.images" :key="item.url">
         <img
-          fit="scale-down"
           :src="item.url"
           :alt="item.description && $t(item.description)"
           :title="item.description && $t(item.description)"
         />
-        <!-- <i18n-box v-if="item.description" class="description" :t="item.description" size="small" /> -->
+        <i18n-box v-if="item.description" class="description" :t="item.description" size="small" />
       </div>
     </div>
 
@@ -28,11 +27,11 @@
       </my-checkbox>
     </my-checkbox-group>
 
-    <el-row justify="center">
-      <el-col class="button-box" :xs="24" :sm="8" :md="6" v-for="item in cq.button">
-        <my-button class="button" :t="item.text" plain @click="question.next(item)" />
-      </el-col>
-    </el-row>
+    <el-affix position="bottom" :offset="0" :key="cq.id">
+      <div class="button-box">
+        <my-button v-for="item in cq.button" class="button" :t="item.text" plain @click="question.next(item)" />
+      </div>
+    </el-affix>
   </div>
 </template>
 
@@ -76,19 +75,25 @@ $list-image-size: 80px;
   }
 
   .image-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include auto-grid(200px);
     gap: 20px;
+    width: 100%;
+    padding: $container-padding;
+
     .image-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
       img {
+        object-fit: contain;
         width: 100%;
-        // max-height: 200px;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+        height: clamp(10px, 40vw, 200px);
       }
       .description {
-        margin: 4px;
-        text-align: center;
+        margin: 6px;
+        opacity: 0.6;
+        height: fit-content;
       }
     }
   }
@@ -130,12 +135,14 @@ $list-image-size: 80px;
   }
 
   .button-box {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
+    // @include auto-grid(47vw);
+    @include auto-grid(clamp(10px, 47vw, 500px));
+    padding: $container-padding;
+    padding-top: calc($container-padding * 2);
+    gap: 10px;
+    background: linear-gradient(to top, $bg-main 90%, transparent 100%);
 
     .button {
-      width: 90%;
       height: fit-content;
     }
   }

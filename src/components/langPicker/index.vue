@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="lang-picker-container">
     <div
       :class="['button', item.code == i18n.locale ? 'select' : '']"
       v-for="item in i18nContent"
@@ -27,7 +27,7 @@ const i18n = reactive(useI18n())
     font-size: 24px;
   }
 }
-.container {
+.lang-picker-container {
   width: 100%;
   height: 100%;
   padding: 20px;

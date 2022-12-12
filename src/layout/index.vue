@@ -41,14 +41,14 @@ header {
   z-index: 5;
   font-size: $icon-size;
 
-  background: #f5f7fa;
+  background: $bg-header;
   width: 100vw;
   height: $header-height;
 
   // top button
   > * {
     margin: calc(($header-height - $icon-size) / 2);
-    transition: all .1s;
+    transition: all 0.1s;
 
     &:active {
       border-radius: 4px;
@@ -70,8 +70,8 @@ header {
 
 main {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   padding-top: $header-height;
-  background: #fafafa;
+  background: $bg-main;
 }
 </style>

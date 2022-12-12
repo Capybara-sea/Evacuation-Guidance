@@ -1,5 +1,5 @@
 <template>
-  <div class="container" :class="[size]">
+  <div class="i18n-container" :class="[size]">
     <section class="top" v-show="isTopShow" v-html="_tI"></section>
     <section class="main" v-html="_mI"></section>
   </div>
@@ -49,11 +49,12 @@ const isTopShow = computed(() => {
 </script>
 
 <style lang="scss" scoped>
-.container {
+.i18n-container {
   line-height: 1;
+  width: fit-content;
+  word-wrap: break-word;
   font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial,
     sans-serif;
-  width: fit-content;
 
   .top {
     font-size: 0.7em;
