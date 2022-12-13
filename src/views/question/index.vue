@@ -93,7 +93,7 @@ $list-image-size: 80px;
       img {
         object-fit: contain;
         width: 100%;
-        height: clamp(10px, 40vw, 200px);
+        height: min(40vw, 200px);
       }
       .description {
         margin: 6px;
@@ -117,8 +117,6 @@ $list-image-size: 80px;
         grid-template-columns: auto 1fr 30px;
         grid-template-areas: 'image i18n icon';
         gap: 10px;
-        align-items: center;
-        justify-items: center;
 
         .image {
           grid-area: image;
@@ -134,13 +132,15 @@ $list-image-size: 80px;
 
         .select-icon {
           grid-area: icon;
+          align-self: center;
+          justify-self: center;
         }
       }
     }
   }
 
   .button-box {
-    @include auto-grid(clamp(10px, 47vw, 500px));
+    @include auto-grid(min(47vw, 500px));
     justify-items: center;
     padding: $container-padding;
     padding-top: calc($container-padding * 2);
@@ -148,7 +148,7 @@ $list-image-size: 80px;
     background: linear-gradient(to top, $bg-main 90%, transparent 100%);
 
     .button {
-      width: clamp(10px, 100%, 600px);
+      width: min(100%, 600px);
       height: fit-content;
     }
   }
