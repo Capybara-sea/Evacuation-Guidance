@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@ctrl/tinycolor": "^3.4.1",
+    "@vueuse/core": "^9.6.0",
     "element-plus": "^2.2.23",
     "lodash": "^4.17.21",
     "pinia": "^2.0.27",

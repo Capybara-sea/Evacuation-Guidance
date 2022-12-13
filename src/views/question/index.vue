@@ -1,22 +1,21 @@
 <template>
   <div v-if="cq" class="container">
+    <!-- content -->
     <div class="content">
       <i18n-box class="content-i18n" :t="cq.content" size="large" />
     </div>
 
-    <div class="image-box" v-viewer>
-      <div class="image-item" v-for="(item, index) in cq.images" :key="item.url">
-        <img
-          :src="item.url"
-          :alt="item.description && $t(item.description)"
-          :title="item.description && $t(item.description)"
-        />
+    <!-- images -->
+    <div v-if="cq.images" class="image-box" v-viewer>
+      <div class="image-item" v-for="item in cq.images" :key="item.url">
+        <img :src="item.url" :alt="item.description && $t(item.description)" />
         <i18n-box v-if="item.description" class="description" :t="item.description" size="small" />
       </div>
     </div>
 
     <el-divider border-style="dotted" style="margin: 2px 0" />
 
+    <!-- grid [type==grid] -->
     <my-checkbox-group v-if="cq.type == 'grid'" class="checkbox-group" v-model="checked">
       <my-checkbox v-for="item in cq.list" class="checkbox-group-item" :label="item.text" v-slot="{ checked }">
         <my-button class="button" plain :color="checked ? '#67c23a' : '#606266'">
@@ -27,7 +26,8 @@
       </my-checkbox>
     </my-checkbox-group>
 
-    <el-affix position="bottom" :offset="0" :key="cq.id">
+    <!-- botton -->
+    <el-affix position="bottom" :offset="0" :key="affixKey">
       <div class="button-box">
         <my-button v-for="item in cq.button" class="button" :t="item.text" plain @click="question.next(item)" />
       </div>
@@ -36,8 +36,9 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue'
+import { ref, watch, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import { useWindowSize } from '@vueuse/core'
 import myCheckboxGroup from '@/components/myCheckboxGroup/index.vue'
 import myCheckbox from '@/components/myCheckbox/index.vue'
 import Question from './question'
@@ -59,6 +60,10 @@ watch(
   ({ id }, { id: oldId } = {}) => id != oldId && question.setCq(id),
   { immediate: true },
 )
+
+// Change key when cq.id/windowWidth changes Force refresh
+const { width: windowWidth } = useWindowSize()
+const affixKey = computed(() => '' + cq.value.id + windowWidth.value)
 </script>
 
 <style lang="scss" scoped>
@@ -135,14 +140,15 @@ $list-image-size: 80px;
   }
 
   .button-box {
-    // @include auto-grid(47vw);
     @include auto-grid(clamp(10px, 47vw, 500px));
+    justify-items: center;
     padding: $container-padding;
     padding-top: calc($container-padding * 2);
     gap: 10px;
     background: linear-gradient(to top, $bg-main 90%, transparent 100%);
 
     .button {
+      width: clamp(10px, 100%, 600px);
       height: fit-content;
     }
   }
