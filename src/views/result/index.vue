@@ -1,43 +1,46 @@
 <template>
-  <el-descriptions :column="1" border ref="cell">
-    <i18n-box class="cell-left" t="name" size="small" />
+  <div v-loading="loading">
+    <!--  -->
+    <template v-if="!imgUrl">
+      <el-descriptions :column="1" border ref="cell">
+        <i18n-box class="cell-left" t="name" size="small" />
 
-    <template v-for="item in script">
-      <el-descriptions-item v-if="result[item.id]">
-        <!-- title -->
-        <template #label>
-          <i18n-box class="cell-left" :t="item.content" size="small" />
+        <template v-for="item in script">
+          <el-descriptions-item v-if="result[item.id]">
+            <!-- title -->
+            <template #label>
+              <i18n-box class="cell-left" :t="item.content" size="small" />
+            </template>
+
+            <!-- result -->
+            <div class="cell-right">
+              <template v-if="item.type == 'check'">
+                <i18n-box :t="result[item.id]" size="small" />
+              </template>
+              <template v-else-if="item.type == 'grid'">
+                <i18n-box class="grid" v-for="text in result[item.id]" :t="text" size="small" />
+              </template>
+            </div>
+          </el-descriptions-item>
         </template>
-
-        <!-- result -->
-        <div class="cell-right">
-          <template v-if="item.type == 'check'">
-            <i18n-box :t="result[item.id]" size="small" />
-          </template>
-          <template v-else-if="item.type == 'grid'">
-            <i18n-box class="grid" v-for="text in result[item.id]" :t="text" size="small" />
-          </template>
-        </div>
-
-        <!--  -->
-      </el-descriptions-item>
+      </el-descriptions>
     </template>
-  </el-descriptions>
 
-  <my-button class="button" t="button.confirm" @click="toImg" size="small" />
-
-  <el-dialog v-model="imgShow" fullscreen>
-    <div class="imgShow" v-viewer>
-      <img class="img" :src="imgUrl" />
-    </div>
-  </el-dialog>
+    <!--  -->
+    <template v-else>
+      <img class="result-img" :src="imgUrl" alt="" />
+    </template>
+  </div>
 </template>
 
 <script setup>
 import script from '@/script'
 import { useStore } from '@/store'
+import { onMounted } from 'vue'
 import { ref, computed } from '@vue/reactivity'
 import dom2image from '@/utils/dom2image'
+import 'element-plus/es/components/message/style/css'
+import { ElMessage } from 'element-plus'
 
 const store = useStore()
 const devResult = {
@@ -55,12 +58,19 @@ const result = computed(() => {
 
 const cell = ref()
 const imgUrl = ref()
-const imgShow = ref()
-async function toImg() {
-  const url = await dom2image(cell.value.$el)
-  imgUrl.value = url
-  imgShow.value = true
-}
+const loading = ref(true)
+
+onMounted(async () => {
+  try {
+    const url = await dom2image(cell.value.$el, 0)
+    imgUrl.value = url
+    ElMessage.success('Exporting images successfully!')
+  } catch (error) {
+    ElMessage.error('Oops, failed to export the image.')
+  } finally {
+    loading.value = false
+  }
+})
 </script>
 
 <style lang="scss" scoped>
@@ -86,19 +96,7 @@ async function toImg() {
     }
   }
 }
-
-.button {
-  margin: 20px auto;
-  width: min(50vw, 500px);
-}
-
-.imgShow {
-  display: flex;
-
-  .img {
-    width: 90vw;
-    height: 80vh;
-    object-fit: contain;
-  }
+.result-img {
+  width: 100vw;
 }
 </style>
