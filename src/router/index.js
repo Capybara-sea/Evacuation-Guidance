@@ -18,6 +18,11 @@ const routes = [
     component: () => import('@/views/result/index.vue'),
   },
   {
+    path: '/info',
+    name: 'info',
+    component: () => import('@/views/info/index.vue'),
+  },
+  {
     path: '/:pathMatch(.*)',
     redirect: '/',
   },
@@ -30,7 +35,7 @@ const router = createRouter({
 
 router.beforeEach((to, from) => {
   if (from.name == to.name) return
-  console.log(`${from.name} ==> ${to.name}`)
+  console.log(`[route]${from.name}->${to.name}`)
 
   const store = useStore()
   store.currentRouteName = to.name

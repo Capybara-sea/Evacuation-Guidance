@@ -1,7 +1,7 @@
 <template>
   <div class="button-box">
     <my-button t="home.question" plain @click="$router.push('/question')" />
-    <my-button t="home.info" plain @click="click(1)" />
+    <my-button t="home.info" plain @click="$router.push('/info')" />
   </div>
 </template>
 
