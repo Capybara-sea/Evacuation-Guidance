@@ -1,8 +1,7 @@
 <template>
-  <el-descriptions :column="1" border>
-    <template #title>
-      <i18n-box class="cell-left" t="name" size="small" />
-    </template>
+  <el-descriptions :column="1" border ref="cell">
+    <i18n-box class="cell-left" t="name" size="small" />
+
     <template v-for="item in script">
       <el-descriptions-item v-if="result[item.id]">
         <!-- title -->
@@ -24,15 +23,24 @@
       </el-descriptions-item>
     </template>
   </el-descriptions>
+
+  <my-button class="button" t="button.confirm" @click="toImg" size="small" />
+
+  <el-dialog v-model="imgShow" fullscreen>
+    <div class="imgShow" v-viewer>
+      <img class="img" :src="imgUrl" />
+    </div>
+  </el-dialog>
 </template>
 
 <script setup>
 import script from '@/script'
 import { useStore } from '@/store'
-import { computed } from '@vue/reactivity'
+import { ref, computed } from '@vue/reactivity'
+import dom2image from '@/utils/dom2image'
 
 const store = useStore()
-const defaultResult = {
+const devResult = {
   1: 'button.yes',
   2: ['list.lang.en-US', 'list.lang.vi-VN', 'list.lang.id-ID'],
   4: 'button.yes',
@@ -41,14 +49,24 @@ const defaultResult = {
   7: ['list.need.3', 'list.need.5'],
 }
 const result = computed(() => {
-  if (import.meta.env.DEV) return { ...store.result, ...defaultResult }
+  if (import.meta.env.DEV) return { ...store.result, ...devResult }
   return store.result
 })
+
+const cell = ref()
+const imgUrl = ref()
+const imgShow = ref()
+async function toImg() {
+  const url = await dom2image(cell.value.$el)
+  imgUrl.value = url
+  imgShow.value = true
+}
 </script>
 
 <style lang="scss" scoped>
 .cell {
   &-left {
+    font-weight: 400;
     min-width: 30vw;
   }
 
@@ -60,12 +78,27 @@ const result = computed(() => {
       padding: 4px 6px;
       border-radius: 4px;
       background: #fff;
-      // width: 100%;
-      box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+      box-sizing: border-box;
+      border: 1px #091e421f solid;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-around;
     }
+  }
+}
+
+.button {
+  margin: 20px auto;
+  width: min(50vw, 500px);
+}
+
+.imgShow {
+  display: flex;
+
+  .img {
+    width: 90vw;
+    height: 80vh;
+    object-fit: contain;
   }
 }
 </style>

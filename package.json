@@ -12,7 +12,9 @@
   "dependencies": {
     "@ctrl/tinycolor": "^3.4.1",
     "@vueuse/core": "^9.6.0",
+    "dom-to-image-more": "^2.13.0",
     "element-plus": "^2.2.23",
+    "html2canvas": "^1.4.1",
     "lodash": "^4.17.21",
     "pinia": "^2.0.27",
     "v-viewer": "^3.0.11",
