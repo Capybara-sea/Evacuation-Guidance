@@ -2,9 +2,8 @@
   <header>
     <svg-icon name="left-arrow" :class="{ disabled }" @click="$router.back()" />
     <svg-icon name="home" @click="$router.push('/')" />
-    <svg-icon class="right" name="language" @click="showLangPicker = true" />
+    <svg-icon class="right" name="language" @click="showLangPicker = !showLangPicker" />
   </header>
-
   <main><slot /></main>
 
   <el-dialog v-model="showLangPicker" fullscreen>
