@@ -1,33 +1,39 @@
 # Evacuation Guidance
 
-## 本地化
+[Engilsh](./README.md) | [日本語](./.github/readme/README.ja-JP.md) | [中文](./.github/readme/README.zh-CN.md)
 
-已经完成的语言
-- `日语`
-- `英语`
-- `简体中文`
-- `韩文`
-- `越南语`
-- `尼泊尔语`
-- `他加禄语`
-- `印度尼西亚语`
-- `繁体中文`
-- `泰语`
-- `缅甸语`
-- `西班牙语`
-- `法语`
-- `葡萄牙语`
-- `俄语`
+> This site serves as a guide for evacuation after a disaster occurs. This site supports multiple languages. Put a multiple-choice question on one page (whether you want or have questions, etc.), and generate a checklist after all answers. When you show it to our staff, you The needs of users can be grasped immediately. This allows any shelter (not only in Japan, but overseas) to use the site for minimal communication with staff. In addition, after a disaster occurs, you can ask for help not only at the evacuation center, but also through this website.
 
+## Localization
 
+completed language
 
-## 项目启动
+- `Japanese`
+- `English`
+- `Simplified Chinese`
+- `Korean`
+- `Vietnamese`
+- `Nepali`
+- `Tagalog`
+- `Indonesian`
+- `Traditional Chinese`
+- `Thai`
+- `Burmese`
+- `Spanish`
+- `French`
+- `Portuguese`
+- `Russian`
 
-1. 将项目克隆到本地
+## Project begining
+
+1. Clone the project locally
    `git clone https://github.com/Capybara-sea/Evacuation-Guidance.git`
 
-2. npm包安装
+2. Enter the project
+   `cd Evacuation-Guidance`
+
+3. npm package installation
    `npm install`
 
-3. 启动服务
+4. Start the service
    `npm run dev`
