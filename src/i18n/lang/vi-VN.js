@@ -3,7 +3,7 @@ export default {
   code: 'vi-VN',
   // 言語の名前
   name: 'Tiếng Việt',
-  
+
   home: {
     // 外国人向け避難誘導
     question: 'Sơ tán người ngoại quốc',
@@ -22,6 +22,10 @@ export default {
     // 欲しいものはありますか？
     5: 'Bạn có cần gì không?',
   },
+  image: {
+    listen: 'Voice Tra là một ứng dụng dịch giọng nói đa ngôn ngữ cho điện thoại thông minh.',
+    google: 'Google Dịch là một ứng dụng dịch được cung cấp bởi Google.',
+  },
   button: {
     // はい
     yes: 'Phải',
@@ -33,7 +37,7 @@ export default {
   list: {
     lang: {
       // 英語
-        'en-US': 'Tiếng Anh',
+      'en-US': 'Tiếng Anh',
       // 中国語(簡体字)
       'zh-CN': 'Tiếng Trung giản thể',
       // 韓国語
@@ -114,6 +118,24 @@ export default {
       7: 'Thuốc',
       // ミルク
       8: 'Sữa',
+    },
+  },
+  info: {
+    link: 'Trang web tham khảo',
+    intro: {
+      1: {
+        title: 'Hỗ trợ đa ngôn ngữ trong thời gian thảm họa',
+        content: 'Người nước ngoài sống ở Nhật Bản thường được xếp vào nhóm dễ bị ảnh hưởng bởi thảm họa vì họ không thông thạo tiếng Nhật, không quen với môi trường sống ở Nhật Bản hoặc không biết về thảm họa. Với mục đích hỗ trợ việc cung cấp thông tin suôn sẻ bởi các hiệp hội quốc tế trong khu vực, chính quyền địa phương, v.v., CLAIR đã chuẩn bị một cuốn sách hướng dẫn về hỗ trợ đa ngôn ngữ trong thời gian xảy ra thảm họa, xem xét việc ứng phó với thảm họa từ thời điểm bình thường và sử dụng nó trong việc xây dựng một hệ thống hỗ trợ đa ngôn ngữ. và một công cụ để tạo các trang hiển thị đa ngôn ngữ có thể cung cấp thông tin văn bản bằng nhiều ngôn ngữ.',
+      },
+      2: {
+        title: 'Biểu đồ tương ứng thang cường độ địa chấn',
+        content: 'Không có tiêu chuẩn chuẩn hóa quốc tế cho thang đo cường độ địa chấn, và có một số chỉ số được mỗi quốc gia và khu vực áp dụng. Người nước ngoài rất khó hiểu được cường độ của trận động đất, điều mà người Nhật đã quen thuộc. Cường độ địa chấn là chỉ số thể hiện cường độ chuyển động của mặt đất động đất ở từng khu vực, ở Nhật Bản sử dụng thang cường độ địa chấn 10 cấp từ 0 đến 7 của Cơ quan Khí tượng Nhật Bản, nhưng các quốc gia khác sử dụng thang cường độ địa chấn khác nhau. 12 lớp cường độ địa chấn là phổ biến ở nước ngoài. Đối với những người nước ngoài đã quen với lớp 12, cường độ địa chấn 7 hoặc 6 trên không có nghĩa là cường độ địa chấn lớn. Vì vậy, tác giả đã kết hợp hai yếu tố gia tốc địa chấn và tác động của chấn động và lập bản đồ về sự tương ứng giữa thang cường độ địa chấn được sử dụng ở các nước trên thế giới và thang cường độ địa chấn của Cơ quan Khí tượng Nhật Bản, để người nước ngoài hiểu rõ hơn về nguy cơ động đất. làm cho nó dễ dàng.',
+      },
+
+    },
+    pics: {
+      1: 'Cường độ địa chấn và tình trạng chấn động',
+      2: 'Biểu đồ tương ứng giữa thang cường độ địa chấn được sử dụng chủ yếu trên thế giới hiện nay và thang cường độ địa chấn của Cơ quan Khí tượng Nhật Bản',
     },
   },
 }

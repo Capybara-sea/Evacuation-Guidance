@@ -19,6 +19,10 @@ export default {
     // 欲しいものはありますか？
     5: 'Apakah ada barang yang dibutuhkan?',
   },
+  image: {
+    listen: 'Voice Tra adalah aplikasi terjemahan ucapan multibahasa untuk smartphone.',
+    google: 'Google Translate adalah aplikasi terjemahan yang disediakan oleh Google.',
+  },
   button: {
     // はい
     yes: 'ya',
@@ -111,6 +115,24 @@ export default {
       7: 'Obat',
       // ミルク
       8: 'Susu',
+    },
+  },
+  info: {
+    link: 'Situs referensi',
+    intro: {
+      1: {
+        title: 'Dukungan multibahasa di saat bencana',
+        content: 'Orang asing yang tinggal di Jepang seringkali tergolong rawan bencana karena tidak fasih berbahasa Jepang, tidak paham dengan lingkungan tempat tinggal di Jepang, atau tidak tahu tentang bencana. Dengan tujuan mendukung kelancaran penyediaan informasi oleh asosiasi internasional regional, pemerintah daerah, dll., CLAIR telah menyiapkan buku panduan untuk dukungan multibahasa pada saat bencana yang mempertimbangkan respons bencana dari waktu normal dan memanfaatkannya dalam membangun sistem dukungan multibahasa. , dan alat untuk membuat lembar tampilan multibahasa yang dapat memberikan informasi teks dalam berbagai bahasa.',
+      },
+      2: {
+        title: 'Bagan korespondensi skala intensitas seismik',
+        content: 'Tidak ada standar standar internasional untuk skala intensitas seismik, dan ada beberapa indeks yang diadopsi oleh setiap negara dan wilayah. Sulit bagi orang asing untuk memahami intensitas gempa yang biasa dialami orang Jepang. Intensitas seismik adalah indeks yang menyatakan kekuatan gerakan tanah gempa di setiap wilayah.Di Jepang, digunakan skala intensitas seismik Badan Meteorologi Jepang dari 10 level dari 0 hingga 7, tetapi negara lain menggunakan skala intensitas seismik yang berbeda. 12 kelas intensitas seismik umum di luar negeri. Bagi orang asing yang terbiasa dengan kelas 12, intensitas seismik 7 atau 6 atas sama sekali bukan intensitas seismik yang besar. Oleh karena itu, penulis menggabungkan dua elemen percepatan seismik dan dampak gempa dan membuat peta korespondensi antara skala intensitas seismik yang digunakan di negara-negara di seluruh dunia dan skala intensitas seismik Badan Meteorologi Jepang, sehingga orang asing dapat lebih memahami bahaya gempa, permudah.',
+      },
+
+    },
+    pics: {
+      1: 'Intensitas seismik dan status tremor',
+      2: 'Diagram korespondensi antara skala intensitas seismik yang banyak digunakan di dunia saat ini dan skala intensitas seismik Badan Meteorologi Jepang',
     },
   },
 }

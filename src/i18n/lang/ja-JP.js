@@ -25,7 +25,7 @@ export default {
     5: $('欲', 'ほ') + 'しいものはありますか？',
   },
   image: {
-    listen: 'Voice　Traは、スマートフォン用の多言語音声翻訳アプリです。',
+    listen: 'Voice Traは、スマートフォン用の多言語音声翻訳アプリです。',
     google: 'Google Translateは Google が提供する翻訳アプリです。',
   },
   button: {

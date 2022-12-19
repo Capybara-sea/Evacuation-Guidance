@@ -22,6 +22,10 @@ export default {
     // 欲しいものはありますか？
     5: 'Quer alguma coisa?',
   },
+  image: {
+    listen: 'Voice Tra é um aplicativo de tradução de fala multilíngue para smartphones.',
+    google: 'O Google Tradutor é um aplicativo de tradução fornecido pelo Google.',
+  },
   button: {
     // はい
     yes: 'Sim',
@@ -114,6 +118,24 @@ export default {
       7: 'Medicina',
       // ミルク
       8: 'leite seco',
+    },
+  },
+  info: {
+    link: 'local de referência',
+    intro: {
+      1: {
+        title: 'Suporte multilíngue em tempos de desastre',
+        content: 'Os estrangeiros que vivem no Japão são frequentemente classificados como vulneráveis ​​a desastres porque não são fluentes em japonês, não estão familiarizados com o ambiente de vida no Japão ou não sabem sobre desastres. Com o objetivo de apoiar o fornecimento regular de informações por associações regionais internacionais, governos locais, etc., CLAIR preparou um guia para suporte multilíngue em tempos de desastre que considera a resposta a desastres em tempos normais e o utiliza na construção de um sistema de suporte multilíngue. , e uma ferramenta para criar planilhas de exibição multilíngues que podem fornecer informações de texto em vários idiomas.',
+      },
+      2: {
+        title: 'Gráfico de correspondência da escala de intensidade sísmica',
+        content: 'Não existe um padrão internacionalmente padronizado para escalas de intensidade sísmica, existindo diversos índices adotados por cada país e região. É difícil para os estrangeiros entenderem a intensidade do terremoto que os japoneses conhecem. A intensidade sísmica é um índice que expressa a força do movimento do solo do terremoto em cada região.No Japão, a escala de intensidade sísmica da Agência Meteorológica do Japão de 10 níveis de 0 a 7 é usada, mas outros países usam diferentes escalas de intensidade sísmica. 12 classes de intensidade sísmica são comuns no exterior. Para os estrangeiros que estão acostumados com a 12ª classe, uma intensidade sísmica de 7 ou 6 superior não é de forma alguma uma grande intensidade sísmica. Portanto, o autor incorporou os dois elementos da aceleração sísmica e o impacto dos tremores e criou um mapa de correspondência entre as escalas de intensidade sísmica usadas em países ao redor do mundo e as escalas de intensidade sísmica da Agência Meteorológica do Japão, para que os estrangeiros possam entender melhor o perigo de terremotos.facilite.',
+      },
+
+    },
+    pics: {
+      1: 'Intensidade sísmica e estado de tremor',
+      2: 'Diagrama de correspondência entre as escalas de intensidade sísmica usadas principalmente no mundo atual e as escalas de intensidade sísmica da Agência Meteorológica do Japão',
     },
   },
 }

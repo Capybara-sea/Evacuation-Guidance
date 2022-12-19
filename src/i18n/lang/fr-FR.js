@@ -3,7 +3,7 @@ export default {
   code: 'fr-FR',
   // 言語の名前
   name: 'Français',
-  
+
   home: {
     // 外国人向け避難誘導
     question: 'Guide d’évacuation pour les étrangers',
@@ -21,6 +21,10 @@ export default {
     4: 'Avez-vous quelque chose qui vous trouble?',
     // 欲しいものはありますか？
     5: 'Y a-t-il quelque chose que vous voulez?',
+  },
+  image: {
+    listen: 'Voice Tra est une application de traduction vocale multilingue pour smartphones.',
+    google: 'Google Translate est une application de traduction fournie par Google.',
   },
   button: {
     // はい
@@ -114,6 +118,24 @@ export default {
       7: 'Médisyn',
       // ミルク
       8: 'lait en poudre',
+    },
+  },
+  info: {
+    link: 'Site de référence',
+    intro: {
+      1: {
+        title: 'Assistance multilingue en cas de catastrophe',
+        content: 'Les étrangers vivant au Japon sont souvent classés comme vulnérables aux catastrophes car ils ne parlent pas couramment le japonais, ne connaissent pas le cadre de vie au Japon ou ne sont pas au courant des catastrophes. Dans le but de soutenir la fourniture fluide d’informations par les associations internationales régionales, les gouvernements locaux, etc., CLAIR a préparé un guide pour le soutien multilingue en temps de catastrophe qui considère la réponse aux catastrophes en temps normal et lutilise dans la construction d’un système de soutien multilingue. , et un outil pour créer des feuilles d’affichage multilingues qui peuvent fournir des informations textuelles dans plusieurs langues.',
+      },
+      2: {
+        title: 'Tableau de correspondance de l’échelle d’intensité sismique',
+        content: 'Il n’existe pas de norme internationale normalisée pour les échelles d’intensité sismique, et il existe plusieurs indices adoptés par chaque pays et région. Il est difficile pour les étrangers de comprendre l’intensité du tremblement de terre, que les Japonais connaissent bien. L’intensité sismique est un indice qui exprime la force du mouvement du sol sismique dans chaque région. Au Japon, l’échelle d’intensité sismique de l’Agence météorologique japonaise de 10 niveaux de 0 à 7 est utilisée, mais d’autres pays utilisent des échelles d’intensité sismique différentes. 12 classes d’intensité sismique sont courantes outre-mer. Pour les étrangers habitués à la 12e classe, une intensité sismique de 7 ou 6 supérieure n’est en aucun cas une grande intensité sismique. Par conséquent, l’auteur a incorporé les deux éléments de l’accélération sismique et de l’impact des tremblements et a créé une carte de la correspondance entre les échelles d’intensité sismique utilisées dans les pays du monde entier et les échelles d’intensité sismique de l’Agence météorologique japonaise, afin que les étrangers puissent mieux comprendre le danger de tremblements de terre.',
+      },
+
+    },
+    pics: {
+      1: 'Intensité sismique et état des tremblements',
+      2: 'Diagramme de correspondance entre les échelles d’intensité sismique principalement utilisées dans le monde aujourd’hui et les échelles d’intensité sismique de l’Agence météorologique japonaise',
     },
   },
 }
