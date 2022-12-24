@@ -66,7 +66,7 @@ export default [
     type: 'card',
     content: 'content.3',
     images: [
-      { url: 'images/translation/listen.png' },
+      { url: 'images/translation/listen.png' , description: 'image.listen'},
       { url: 'images/translation/google.png', description: 'image.google' },
     ],
     button: [
