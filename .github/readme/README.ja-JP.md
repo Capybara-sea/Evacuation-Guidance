@@ -1,6 +1,6 @@
 # Evacuation Guidance
 
-[Engilsh](../../README.md) | [日本語](./README.ja-JP.md) | [中文](./README.zh-CN.md)
+[Engilsh](../../README.md) | [日本語](README.ja-JP.md) | [中文](README.zh-CN.md)
 
 > 本サイトは災害発生後に避難誘導機能を持つ Web サイトです。本サイトは多言語に対応できて、1 ページに一つの選択問題（何かほしいもの・困っていることがありますかなど）を入れ、すべての回答が終わった後で checklist が生成され、避難所のスタッフに見せるとすぐに利用者のニーズを把握することができます。このように、どの避難所でも（日本だけではなく海外でも）このサイトを利用しスタッフと最低限の意思疎通を図れます。また、災害発生後は避難所だけではなく、他のどこでもこのサイトを使って他人に助けを求めることができます。
 
@@ -27,13 +27,28 @@
 ## プロジェクトの開始
 
 1. プロジェクトをローカルに複製する
-   `git clone https://github.com/Capybara-sea/Evacuation-Guidance.git`
+
+   ```
+   git clone https://github.com/Capybara-sea/Evacuation-Guidance.git
+   ```
 
 2. プロジェクトに入る
-   `cd 避難誘導`
+
+   ```
+   cd Evacuation-Guidance
+   ```
 
 3. npm パッケージのインストール
-   `npm インストール`
+
+   ```
+   npm install
+   ```
 
 4. サービスを開始する
-   `npm run dev`
+   ```
+   npm run dev
+   ```
+
+## License
+
+[MIT](../../LICENSE) © Capybara-sea
