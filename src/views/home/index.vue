@@ -16,7 +16,7 @@
   @include auto-grid(200px);
   padding: 10px;
   gap: 10px;
-  margin-top: 40vh;
+  margin-top: 35vh;
   transform: translateY(-50%);
 }
 .about {
