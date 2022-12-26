@@ -1,14 +1,20 @@
 <template>
   <div class="link">
-    <el-link href="https://www.clair.or.jp/j/multiculture/tagengo/saigai.html" type="primary">
+    <el-link
+      href="https://www.clair.or.jp/j/multiculture/tagengo/saigai.html"
+      type="primary"
+    >
       <svg-icon name="link" />{{ $t('info.link') }}
     </el-link>
   </div>
 
   <div class="demo-collapse">
     <el-collapse accordion>
-      <el-collapse-item v-for="(item, index) in intro" :title="$t(item.title)" :name="index">
-        <!-- <i18n-box v-for="content in item.content" :t="content" :topShow="false" /> -->
+      <el-collapse-item
+        v-for="(item, index) in intro"
+        :title="$t(item.title)"
+        :name="index"
+      >
         {{ $t(item.content) }}
       </el-collapse-item>
     </el-collapse>
@@ -19,7 +25,11 @@
   <br />
 
   <el-tabs v-model="activeName" type="card" class="demo-tabs">
-    <el-tab-pane v-for="item in images" :label="$t(item.title)" :name="$t(item.title)">
+    <el-tab-pane
+      v-for="item in images"
+      :label="$t(item.title)"
+      :name="$t(item.title)"
+    >
       <i18n-box v-for="content in item.content" :t="content" :topShow="false" />
     </el-tab-pane>
   </el-tabs>
