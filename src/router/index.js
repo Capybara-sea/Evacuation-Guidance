@@ -23,6 +23,11 @@ const routes = [
     component: () => import('@/views/info/index.vue'),
   },
   {
+    path: '/about',
+    name: 'about',
+    component: () => import('@/views/about/index.vue'),
+  },
+  {
     path: '/:pathMatch(.*)',
     redirect: '/',
   },
