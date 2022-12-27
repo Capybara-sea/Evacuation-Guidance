@@ -7,6 +7,17 @@ for (const key in files) {
   messages[key.replace(/^.\/lang\/(.*)\.\w+$/, '$1')] = files[key].default
 }
 
+// messagesフリガナの変換
+const formart = (str) =>
+  str.replaceAll(/\$\(([^\s]+)\s([^\s]+)\)/g, '<ruby>$1<rt>$2</rt></ruby>')
+function forEachObject(obj) {
+  for (const key in obj) {
+    if (typeof obj[key] == 'object') forEachObject(obj[key])
+    else if (typeof obj[key] == 'string') obj[key] = formart(obj[key])
+  }
+}
+forEachObject(messages)
+
 // 言語リスト 言語コード参考:lang.md
 const langList = Object.keys(messages)
 
