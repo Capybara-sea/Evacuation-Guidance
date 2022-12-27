@@ -8,9 +8,10 @@
     </el-link>
   </div>
 
-  <div class="demo-collapse">
+  <div class="collapse">
     <el-collapse accordion>
       <el-collapse-item
+        class="collapse-item"
         v-for="(item, index) in intro"
         :title="$t(item.title)"
         :name="index"
@@ -72,6 +73,13 @@ const activeName = ref(t(images[0].title))
   width: 100%;
   text-align: center;
   padding: 16px;
+}
+.collapse {
+  &-item {
+    :deep(.el-collapse-item__header) {
+      line-height: 1.3em;
+    }
+  }
 }
 .tabs {
   .image {
