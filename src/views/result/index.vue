@@ -30,12 +30,13 @@
   </div>
 
   <div class="button-box">
-    <my-button plain @click="getImage"> 生成图片 </my-button>
+    <my-button plain @click="getImage" t="result.generateImage">
+    </my-button>
   </div>
   <el-dialog v-model="showImage" fullscreen>
     <div class="image-box">
       <el-alert
-        title="长按保存图片"
+        :title="$t('result.saveImage')"
         type="success"
         :closable="false"
         center
@@ -50,6 +51,7 @@
 import script from '@/script'
 import { useStore } from '@/store'
 import { ref, computed } from '@vue/reactivity'
+import { useI18n } from 'vue-i18n'
 import dom2image from '@/utils/dom2image'
 import 'element-plus/es/components/message/style/css'
 import { ElMessage } from 'element-plus'
@@ -77,15 +79,15 @@ const result = computed(() => {
 const cell = ref()
 const imgUrl = ref()
 const showImage = ref()
+const { t } = useI18n()
 
 async function getImage() {
   try {
     const url = await dom2image(cell.value.$el, 0)
     imgUrl.value = url
-    ElMessage.success('Exporting images successfully!')
     showImage.value = true
   } catch (error) {
-    ElMessage.error('Oops, failed to export the image.')
+    ElMessage.error(t('result.generateFailed'))
   }
 }
 </script>
