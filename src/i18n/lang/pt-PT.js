@@ -23,8 +23,12 @@ export default {
     5: 'Quer alguma coisa?',
   },
   image: {
-    listen: 'Voice Tra é um aplicativo de tradução de fala multilíngue para smartphones.',
-    google: 'O Google Tradutor é um aplicativo de tradução fornecido pelo Google.',
+    // Voice Traは、スマートフォン用の多言語音声翻訳アプリです。
+    listen:
+      'Voice Tra é um aplicativo de tradução de fala multilíngue para smartphones.',
+    // Google Translateは Google が提供する翻訳アプリです。
+    google:
+      'O Google Tradutor é um aplicativo de tradução fornecido pelo Google.',
   },
   button: {
     // はい
@@ -120,22 +124,37 @@ export default {
       8: 'leite seco',
     },
   },
+  result: {
+    // 画像を生成する
+    generateImage: 'gerar imagem',
+    // イメージの生成に失敗しました
+    generateFailed: 'Falha ao gerar imagem',
+    // 画像を長押しして保存する
+    saveImage: 'Salvar foto',
+  },
   info: {
+    // 参考サイト
     link: 'local de referência',
     intro: {
       1: {
+        // 災害時の多言語支援
         title: 'Suporte multilíngue em tempos de desastre',
+        // 日本に在住している外国人は日本語が不自由であったり、日本の生活環境に不案内であったり、災害のことを知らなかったりすることが多いため、災害弱者と位置づけられています。クレアでは、地域国際化協会、自治体などによる円滑な情報提供を支援することを目的として、平時から災害時対応を考え、多言語支援体制の構築に活かす「災害時の多言語支援のための手引き」や、多言語による文字情報の提供が可能な「多言語表示シート作成ツール」の提供など、災害時外国人支援のための情報を発信しています。
         content:
           'Os estrangeiros que vivem no Japão são frequentemente classificados como vulneráveis ​​a desastres porque não são fluentes em japonês, não estão familiarizados com o ambiente de vida no Japão ou não sabem sobre desastres. Com o objetivo de apoiar o fornecimento regular de informações por associações regionais internacionais, governos locais, etc., CLAIR preparou um guia para suporte multilíngue em tempos de desastre que considera a resposta a desastres em tempos normais e o utiliza na construção de um sistema de suporte multilíngue. , e uma ferramenta para criar planilhas de exibição multilíngues que podem fornecer informações de texto em vários idiomas.',
       },
       2: {
+        // 震度階級対応関係図
         title: 'Gráfico de correspondência da escala de intensidade sísmica',
+        // 震度の階級表には国際的に統一された標準的な規格はなく、それぞれの国や地域が採用したいくつかの指標があります。日本人が慣れ親しんでいる震度も、外国人にはなかなか伝わらないです。震度は各地の地震動の強さを表す指標であり、日本では0 ∼ 7までの10段階の気象庁震度階級が使用されていますが、他国では異なる震度階級が使われています。海外では12階級の震度階級が一般的です。12階級が当たり前の外国人にとっては、震度7や震度6強は決して大きい震度とはいえないのです。そこで、筆者は地震加速度と揺れによる影響の二つの要素を取り入れ、世界各国で使われる震度階級と日本の気象庁震度階級との対応関係図を作成し、外国人が地震の危険性をより把握しやすいようにします。
         content:
           'Não existe um padrão internacionalmente padronizado para escalas de intensidade sísmica, existindo diversos índices adotados por cada país e região. É difícil para os estrangeiros entenderem a intensidade do terremoto que os japoneses conhecem. A intensidade sísmica é um índice que expressa a força do movimento do solo do terremoto em cada região.No Japão, a escala de intensidade sísmica da Agência Meteorológica do Japão de 10 níveis de 0 a 7 é usada, mas outros países usam diferentes escalas de intensidade sísmica. 12 classes de intensidade sísmica são comuns no exterior. Para os estrangeiros que estão acostumados com a 12ª classe, uma intensidade sísmica de 7 ou 6 superior não é de forma alguma uma grande intensidade sísmica. Portanto, o autor incorporou os dois elementos da aceleração sísmica e o impacto dos tremores e criou um mapa de correspondência entre as escalas de intensidade sísmica usadas em países ao redor do mundo e as escalas de intensidade sísmica da Agência Meteorológica do Japão, para que os estrangeiros possam entender melhor o perigo de terremotos.facilite.',
       },
     },
     pics: {
+      // 震度と揺れの状況
       1: 'Intensidade sísmica e estado de tremor',
+      // 震度階級対応関係図
       2: 'Gráfico de correspondência da escala de intensidade sísmica',
     },
   },

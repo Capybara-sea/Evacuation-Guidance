@@ -122,6 +122,14 @@ export default {
       8: 'ミルク',
     },
   },
+  result: {
+    // 画像を生成する
+    generateImage: '画像を生成する',
+    // イメージの生成に失敗しました
+    generateFailed: 'イメージの生成に失敗しました',
+    // 画像を長押しして保存する
+    saveImage: '画像を長押しして保存する',
+  },
   info: {
     // 参考サイト
     link: '参考サイト',
