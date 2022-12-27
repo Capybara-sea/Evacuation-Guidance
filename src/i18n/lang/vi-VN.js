@@ -136,7 +136,7 @@ export default {
     },
     pics: {
       1: 'Cường độ địa chấn và tình trạng chấn động',
-      2: 'Biểu đồ tương ứng giữa thang cường độ địa chấn được sử dụng chủ yếu trên thế giới hiện nay và thang cường độ địa chấn của Cơ quan Khí tượng Nhật Bản',
+      2: 'Biểu đồ tương ứng thang cường độ địa chấn',
     },
   },
 }

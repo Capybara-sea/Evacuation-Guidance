@@ -136,7 +136,7 @@ export default {
     },
     pics: {
       1: 'Seismic intensity at tremor status',
-      2: 'Correspondence diagram sa pagitan ng seismic intensity scales na pangunahing ginagamit sa mundo ngayon at Japan Meteorological Agency seismic intensity scales',
+      2: 'Seismic intensity scale correspondence chart',
     },
   },
 }

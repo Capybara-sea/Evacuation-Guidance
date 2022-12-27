@@ -136,7 +136,7 @@ export default {
     },
     pics: {
       1: 'Intensité sismique et état des tremblements',
-      2: 'Diagramme de correspondance entre les échelles d’intensité sismique principalement utilisées dans le monde aujourd’hui et les échelles d’intensité sismique de l’Agence météorologique japonaise',
+      2: 'Tableau de correspondance de l’échelle d’intensité sismique',
     },
   },
 }

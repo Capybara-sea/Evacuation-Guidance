@@ -136,7 +136,7 @@ export default {
     },
     pics: {
       1: 'Intensidad sísmica y estado del temblor',
-      2: 'Diagrama de correspondencia entre las escalas de intensidad sísmica utilizadas principalmente en el mundo actual y las escalas de intensidad sísmica de la Agencia Meteorológica de Japón',
+      2: 'Carta de correspondencia de la escala de intensidad sísmica',
     },
   },
 }

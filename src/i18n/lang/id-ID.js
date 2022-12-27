@@ -133,7 +133,7 @@ export default {
     },
     pics: {
       1: 'Intensitas seismik dan status tremor',
-      2: 'Diagram korespondensi antara skala intensitas seismik yang banyak digunakan di dunia saat ini dan skala intensitas seismik Badan Meteorologi Jepang',
+      2: 'Bagan korespondensi skala intensitas seismik',
     },
   },
 }

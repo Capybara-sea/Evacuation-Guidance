@@ -136,7 +136,7 @@ export default {
     },
     pics: {
       1: 'Intensidade sísmica e estado de tremor',
-      2: 'Diagrama de correspondência entre as escalas de intensidade sísmica usadas principalmente no mundo atual e as escalas de intensidade sísmica da Agência Meteorológica do Japão',
+      2: 'Gráfico de correspondência da escala de intensidade sísmica',
     },
   },
 }
