@@ -24,15 +24,17 @@
   <el-divider border-style="dotted" />
   <br />
 
-  <el-tabs v-model="activeName" type="card" class="demo-tabs">
+  <el-tabs class="tabs" v-model="activeName" type="card">
     <el-tab-pane
       v-for="item in images"
       :label="$t(item.title)"
       :name="$t(item.title)"
     >
-      <i18n-box v-for="content in item.content" :t="content" :topShow="false" />
+      <img class="image" :src="item.url" v-viewer />
     </el-tab-pane>
   </el-tabs>
+
+  <br />
 </template>
 
 <script setup>
@@ -53,11 +55,11 @@ const intro = [
 const images = [
   {
     title: 'info.pics.1',
-    url: '',
+    url: 'images/earthquake/left.jpg',
   },
   {
     title: 'info.pics.2',
-    url: '',
+    url: 'images/earthquake/right.jpg',
   },
 ]
 
@@ -70,5 +72,12 @@ const activeName = ref(t(images[0].title))
   width: 100%;
   text-align: center;
   padding: 16px;
+}
+.tabs {
+  .image {
+    width: 100%;
+    object-fit: contain;
+    padding: 10px;
+  }
 }
 </style>
