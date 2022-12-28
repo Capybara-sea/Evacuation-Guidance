@@ -128,7 +128,7 @@ export default {
     // イメージの生成に失敗しました
     generateFailed: '生成图片失败',
     // 画像を長押しして保存する
-    saveImage: '长按图片保存',
+    saveImage: '长按保存图片',
   },
   info: {
     // 参考サイト

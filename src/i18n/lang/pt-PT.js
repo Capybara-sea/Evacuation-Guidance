@@ -130,7 +130,7 @@ export default {
     // イメージの生成に失敗しました
     generateFailed: 'Falha ao gerar imagem',
     // 画像を長押しして保存する
-    saveImage: 'Salvar foto',
+    saveImage: 'Pressione e segure para salvar a imagem',
   },
   info: {
     // 参考サイト
