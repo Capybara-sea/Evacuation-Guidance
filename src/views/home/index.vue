@@ -14,7 +14,7 @@
 .button-box {
   display: grid;
   @include auto-grid(200px);
-  padding: 10px;
+  padding: $page-padding;
   gap: 10px;
   margin-top: 35vh;
   transform: translateY(-50%);
