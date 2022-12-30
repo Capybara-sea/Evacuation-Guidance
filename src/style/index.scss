@@ -5,5 +5,44 @@ $font-size-s: clamp(1rem, 3vw, 1.6rem);
 $font-size-m: clamp(1.25rem, 3.75vw, 2rem);
 $font-size-l: clamp(1.5rem, 4vw, 2.4rem);
 
-$bg-header: #f5f7fa;
-$bg-main: #fafafa;
+$bg-0: var(--bg-0);
+$bg-1: var(--bg-1);
+$bg-2: var(--bg-2);
+$font-0: var(--font-0);
+$font-1: var(--font-1);
+$font-2: var(--font-2);
+
+html {
+  color: var(--font-1);
+}
+
+// color
+html {
+  --white-0: hsl(0, 0%, 100%);
+  --white-1: hsl(0, 0%, 98%);
+  --white-2: hsl(0, 0%, 94%);
+
+  --black-0: hsl(0, 0%, 0%);
+  --black-1: hsl(0, 0%, 8%);
+  --black-2: hsl(0, 0%, 12%);
+}
+
+// theme
+$theme-transition: 0.2s;
+
+html.light {
+  --bg-0: var(--white-0);
+  --bg-1: var(--white-1);
+  --bg-2: var(--white-2);
+  --font-0: var(--black-0);
+  --font-1: var(--black-1);
+  --font-2: var(--black-2);
+}
+html.dark {
+  --bg-0: var(--black-0);
+  --bg-1: var(--black-1);
+  --bg-2: var(--black-2);
+  --font-0: var(--white-0);
+  --font-1: var(--white-1);
+  --font-2: var(--white-2);
+}

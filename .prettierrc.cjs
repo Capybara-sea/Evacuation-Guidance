@@ -1,7 +1,7 @@
 // 【配置官网】https://www.prettier.cn/docs/options.html
 module.exports = {
   // [int]单行长度
-  printWidth: 80,
+  printWidth: 100,
   // [always|never|preserver]是否自动折行
   // always   - 当超出print width时就折行
   // never    - 不折行

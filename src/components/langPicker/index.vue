@@ -1,12 +1,14 @@
 <template>
   <div class="lang-picker-container">
-    <div
-      :class="['button', item.code == i18n.locale ? 'select' : '']"
+    <my-button
+      class="button"
       v-for="item in i18nContent"
-      :key="item.code"
+      :color="item.code == i18n.locale ? '#529b2e' : ''"
       @click="i18n.locale = item.code"
-      v-html="`<span>${item.name}</span>`"
-    />
+      plain
+    >
+      <div v-html="item.name" />
+    </my-button>
   </div>
 </template>
 
@@ -37,47 +39,9 @@ const i18n = reactive(useI18n())
     @include auto-grid(10%);
   }
   gap: 10px;
-
-  .button {
-    width: 100%;
-    // @media screen and (max-width: 959px) {
-    //   width: 27%;
-    // }
-    height: 40px;
-
-    border-radius: 8px;
-    background: #ecf5ff;
-    border: 1px solid #a0cfff;
-
-    //布局
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    // 文字
-    font-weight: 900;
-    color: #337ecc;
-    cursor: pointer; // 手型鼠标
-
-    // 其他
-    user-select: none;
-    transition: all 0.1s;
-
-    &:hover {
-      color: #fff;
-      background: #a0cfff;
-    }
-
-    &.select {
-      color: #529b2e;
-      background: #f0f9eb;
-      border: 1px solid #95d475;
-
-      &:hover {
-        color: #fff;
-        background: #95d475;
-      }
-    }
-  }
+}
+.button {
+  display: flex;
+  align-items: center;
 }
 </style>

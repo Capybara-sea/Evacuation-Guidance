@@ -4,6 +4,10 @@ function darken(color, amount = 20) {
   return color.mix('#141414', amount).toHexString()
 }
 
+function lighten(color, amount = 20) {
+  return color.mix('#fafafa', amount).toHexString()
+}
+
 export function btnColor(buttonColor, plain = false, isDark = false) {
   buttonColor ||= '#409EFF'
   const color = new TinyColor(buttonColor)
@@ -15,7 +19,7 @@ export function btnColor(buttonColor, plain = false, isDark = false) {
   if (plain) {
     return {
       '--mb-bg-color': isDark ? darken(color, 90) : color.tint(90).toHexString(),
-      '--mb-text-color': buttonColor,
+      '--mb-text-color': isDark ? lighten(color, 70) : buttonColor,
       '--mb-border-color': isDark ? darken(color, 50) : color.tint(50).toHexString(),
       '--mb-hover-text-color': textColor,
       '--mb-hover-bg-color': buttonColor,

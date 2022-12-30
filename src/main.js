@@ -7,6 +7,7 @@ import router from './router'
 import components from './components'
 import 'viewerjs/dist/viewer.css'
 import VueViewer from 'v-viewer'
+import 'element-plus/theme-chalk/dark/css-vars.css'
 
 const app = createApp(App)
 const pinia = createPinia()

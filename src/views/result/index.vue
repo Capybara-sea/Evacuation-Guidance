@@ -16,12 +16,7 @@
               <i18n-box :t="result[item.id]" size="small" />
             </template>
             <template v-else-if="item.type == 'grid'">
-              <i18n-box
-                class="grid"
-                v-for="text in result[item.id]"
-                :t="text"
-                size="small"
-              />
+              <i18n-box class="grid" v-for="text in result[item.id]" :t="text" size="small" />
             </template>
           </div>
         </el-descriptions-item>
@@ -30,18 +25,11 @@
   </div>
 
   <div class="button-box">
-    <my-button plain @click="getImage" t="result.generateImage">
-    </my-button>
+    <my-button plain @click="getImage" t="result.generateImage"> </my-button>
   </div>
   <el-dialog v-model="showImage" fullscreen>
     <div class="image-box">
-      <el-alert
-        :title="$t('result.saveImage')"
-        type="success"
-        :closable="false"
-        center
-        show-icon
-      />
+      <el-alert :title="$t('result.saveImage')" type="success" :closable="false" center show-icon />
       <img :src="imgUrl" />
     </div>
   </el-dialog>
@@ -61,13 +49,7 @@ const devResult = {
   1: 'button.yes',
   2: ['list.lang.en-US', 'list.lang.vi-VN', 'list.lang.id-ID'],
   4: 'button.yes',
-  5: [
-    'list.help.1',
-    'list.help.3',
-    'list.help.5',
-    'list.help.8',
-    'list.help.7',
-  ],
+  5: ['list.help.1', 'list.help.3', 'list.help.5', 'list.help.8', 'list.help.7'],
   6: 'button.yes',
   7: ['list.need.3', 'list.need.5'],
 }
@@ -83,7 +65,7 @@ const { t } = useI18n()
 
 async function getImage() {
   try {
-    const url = await dom2image(cell.value.$el, 0)
+    const url = await dom2image(cell.value.$el, { background: store.darkMode ? '#111' : '#fff' })
     imgUrl.value = url
     showImage.value = true
   } catch (error) {
@@ -106,9 +88,9 @@ async function getImage() {
       margin: 4px 8px 4px 0;
       padding: 4px 6px;
       border-radius: 4px;
-      background: #fff;
+      background: $bg-2;
       box-sizing: border-box;
-      border: 1px #091e421f solid;
+      border: 1px $bg-1 solid;
       display: flex;
       flex-direction: column;
       justify-content: space-around;

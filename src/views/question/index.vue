@@ -17,8 +17,13 @@
 
     <!-- grid [type==grid] -->
     <my-checkbox-group v-if="cq.type == 'grid'" class="checkbox-group" v-model="checked">
-      <my-checkbox v-for="item in cq.list" class="checkbox-group-item" :label="item.text" v-slot="{ checked }">
-        <my-button class="button" plain :color="checked ? '#67c23a' : '#606266'">
+      <my-checkbox
+        v-for="item in cq.list"
+        class="checkbox-group-item"
+        :label="item.text"
+        v-slot="{ checked }"
+      >
+        <my-button class="button" plain :color="checked ? '#67c23a' : (store.darkMode ? '#606266' : '#606266')">
           <img class="image" v-if="item.image" :src="item.image" fit="scale-down" />
           <i18n-box class="i18n-box" :t="item.text" />
           <svg-icon class="select-icon" :name="checked ? 'select-fill' : 'select'" size="140%" />
@@ -26,10 +31,16 @@
       </my-checkbox>
     </my-checkbox-group>
 
-    <!-- botton -->
+    <!-- button -->
     <el-affix position="bottom" :offset="0" :key="affixKey">
       <div class="button-box">
-        <my-button v-for="item in cq.button" class="button" :t="item.text" plain @click="question.next(item)" />
+        <my-button
+          v-for="item in cq.button"
+          class="button"
+          :t="item.text"
+          plain
+          @click="question.next(item)"
+        />
       </div>
     </el-affix>
   </div>
@@ -39,9 +50,13 @@
 import { ref, watch, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useWindowSize } from '@vueuse/core'
+import { useStore } from '@/store'
 import myCheckboxGroup from '@/components/myCheckboxGroup/index.vue'
 import myCheckbox from '@/components/myCheckbox/index.vue'
 import Question from './question'
+
+// store
+const store = useStore()
 
 // currQuestion
 const cq = ref()
@@ -145,7 +160,8 @@ $list-image-size: 80px;
     padding: $container-padding;
     padding-top: calc($container-padding * 2);
     gap: 10px;
-    background: linear-gradient(to top, $bg-main 90%, transparent 100%);
+    background: linear-gradient(to top, $bg-1 90%, transparent 100%);
+    transition: background $theme-transition;
 
     .button {
       width: min(100%, 600px);

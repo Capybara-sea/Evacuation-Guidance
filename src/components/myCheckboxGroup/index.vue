@@ -34,10 +34,3 @@ provide('myCheckboxGroup', {
   onChange,
 })
 </script>
-
-<style lang="scss" scoped>
-// .my-checkbox-group-container{
-//   display: grid;
-//   gap: 10px;
-// }
-</style>

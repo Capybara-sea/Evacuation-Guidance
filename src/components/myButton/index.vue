@@ -9,6 +9,7 @@
 <script setup>
 import { computed } from '@vue/reactivity'
 import { btnColor } from './util'
+import { useStore } from '@/store'
 
 const props = defineProps({
   color: {
@@ -43,7 +44,8 @@ const props = defineProps({
   },
 })
 
-const btnStyle = computed(() => btnColor(props.color, props.plain, props.dark))
+const store = useStore()
+const btnStyle = computed(() => btnColor(props.color, props.plain, props.dark || store.darkMode))
 </script>
 
 <style lang="scss" scoped>
@@ -52,7 +54,7 @@ const btnStyle = computed(() => btnColor(props.color, props.plain, props.dark))
   border-radius: 8px;
   @include not-select;
   cursor: pointer;
-  transition: all 0.1s;
+  transition: all $theme-transition;
 
   // position
   &.center {
@@ -77,7 +79,7 @@ const btnStyle = computed(() => btnColor(props.color, props.plain, props.dark))
     background: var($bg);
     border: 1px var($border) solid;
   }
-  
+
   @include btn-theme(--mb-text-color, --mb-bg-color, --mb-border-color);
 
   @media (any-hover: hover) {
@@ -92,7 +94,11 @@ const btnStyle = computed(() => btnColor(props.color, props.plain, props.dark))
 
   &.disabled {
     pointer-events: none;
-    @include btn-theme(--mb-disabled-text-color, --mb-disabled-bg-color, --mb-disabled-border-color);
+    @include btn-theme(
+      --mb-disabled-text-color,
+      --mb-disabled-bg-color,
+      --mb-disabled-border-color
+    );
   }
 }
 </style>

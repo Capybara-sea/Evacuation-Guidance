@@ -2,7 +2,8 @@
   <header>
     <svg-icon name="left-arrow" :class="{ disabled }" @click="$router.back()" />
     <svg-icon name="home" @click="$router.push('/')" />
-    <svg-icon class="right" name="language" @click="showLangPicker = !showLangPicker" />
+    <svg-icon class="right" :name="isDark ? 'dark' : 'light'" @click="isDark = !isDark" />
+    <svg-icon name="language" @click="showLangPicker = !showLangPicker" />
   </header>
   <main><slot /></main>
 
@@ -12,14 +13,24 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import LangPicker from '@/components/langPicker/index.vue'
 import { useStore } from '@/store'
+import { useDark } from '@vueuse/core'
 
 const showLangPicker = ref(false)
 
+// store
 const store = useStore()
+
 const disabled = computed(() => store.currentRouteName == 'home')
+
+const isDark = useDark({
+  attribute: 'class',
+  valueDark: 'dark',
+  valueLight: 'light',
+})
+watch(isDark, (dark) => (store.darkMode = dark), { immediate: true })
 </script>
 
 <style lang="scss" scoped>
@@ -40,14 +51,15 @@ header {
   z-index: 5;
   font-size: $icon-size;
 
-  background: $bg-header;
+  background: $bg-2;
+  transition: all 0.1s;
   width: 100vw;
   height: $header-height;
 
   // top button
   > * {
     margin: calc(($header-height - $icon-size) / 2);
-    transition: all 0.1s;
+    transition: background $theme-transition;
 
     &:active {
       border-radius: 4px;
@@ -71,6 +83,7 @@ main {
   width: 100vw;
   min-height: 100vh;
   padding-top: $header-height;
-  background: $bg-main;
+  background: $bg-1;
+  transition: background $theme-transition;
 }
 </style>
