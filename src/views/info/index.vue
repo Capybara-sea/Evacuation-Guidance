@@ -72,7 +72,7 @@ const activeName = ref(t(images[0].title))
 .link {
   width: 100%;
   text-align: center;
-  padding: 16px;
+  padding: $page-padding;
 }
 .collapse {
   &-item {
@@ -85,7 +85,7 @@ const activeName = ref(t(images[0].title))
   .image {
     width: 100%;
     object-fit: contain;
-    padding: 10px;
+    padding: $page-padding;
   }
 }
 </style>

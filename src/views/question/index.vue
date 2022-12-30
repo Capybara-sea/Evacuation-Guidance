@@ -137,7 +137,7 @@ $list-image-size: 80px;
           grid-area: image;
           min-width: $list-image-size;
           width: $list-image-size;
-          border-radius: 8px;
+          border-radius: $border-radius-x;
         }
 
         .i18n-box {

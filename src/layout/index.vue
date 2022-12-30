@@ -35,7 +35,7 @@ watch(isDark, (dark) => (store.darkMode = dark), { immediate: true })
 
 <style lang="scss" scoped>
 $header-height: 50px;
-$icon-size: 30px;
+$icon-size: 36px;
 $active-icon-bg: rgba(0, 0, 0, 0.15);
 
 @media screen and (min-width: 1200px) {
@@ -60,9 +60,10 @@ header {
   > * {
     margin: calc(($header-height - $icon-size) / 2);
     transition: background $theme-transition;
+    border-radius: $border-radius-x;
+    padding: 4px;
 
     &:active {
-      border-radius: 4px;
       background: $active-icon-bg;
       box-shadow: 0 0 1px 2px $active-icon-bg;
     }

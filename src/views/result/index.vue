@@ -87,7 +87,7 @@ async function getImage() {
     .grid {
       margin: 4px 8px 4px 0;
       padding: 4px 6px;
-      border-radius: 4px;
+      border-radius: $border-radius-m;
       background: $bg-2;
       box-sizing: border-box;
       border: 1px $bg-1 solid;
@@ -99,7 +99,7 @@ async function getImage() {
 }
 .button-box {
   width: 100%;
-  padding: 8px;
+  padding: $page-padding;
 }
 .image-box {
   div {
@@ -109,7 +109,7 @@ async function getImage() {
     width: 100%;
     height: 80vh;
     object-fit: contain;
-    padding: 10px;
+    padding: $page-padding;
   }
 }
 </style>

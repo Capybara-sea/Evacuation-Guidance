@@ -20,19 +20,10 @@ const i18n = reactive(useI18n())
 </script>
 
 <style lang="scss" scoped>
-.info {
-  width: 100%;
-  // height: 40px;
-  text-align: center;
-  padding: 10px;
-  .i18n {
-    font-size: 24px;
-  }
-}
 .lang-picker-container {
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: $page-padding;
 
   @include auto-grid(40%);
   @media screen and (min-width: 900px) {

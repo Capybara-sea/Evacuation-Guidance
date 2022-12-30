@@ -51,7 +51,7 @@ const btnStyle = computed(() => btnColor(props.color, props.plain, props.dark ||
 <style lang="scss" scoped>
 .my-btn-container {
   padding: 8px;
-  border-radius: 8px;
+  border-radius: $border-radius-x;
   @include not-select;
   cursor: pointer;
   transition: all $theme-transition;
