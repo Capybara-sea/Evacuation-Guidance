@@ -2,7 +2,7 @@
   <header>
     <svg-icon name="left-arrow" :class="{ disabled }" @click="$router.back()" />
     <svg-icon name="home" @click="$router.push('/')" />
-    <svg-icon class="right" :name="isDark ? 'dark' : 'light'" @click="isDark = !isDark" />
+    <svg-icon class="right" :name="isDark ? 'light' : 'dark'" @click="isDark = !isDark" />
     <svg-icon name="language" @click="showLangPicker = !showLangPicker" />
   </header>
   <main><slot /></main>
