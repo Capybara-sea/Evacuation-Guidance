@@ -130,7 +130,7 @@ export default {
     // イメージの生成に失敗しました
     generateFailed: 'Nabigong bumuo ng larawan',
     // 画像を長押しして保存する
-    saveImage: 'I-save ang larawan',
+    saveImage: 'Pindutin nang matagal upang i-save ang larawan',
   },
   info: {
     // 参考サイト

@@ -129,7 +129,7 @@ export default {
     // イメージの生成に失敗しました
     generateFailed: 'Không thể tạo hình ảnh',
     // 画像を長押しして保存する
-    saveImage: 'lưu hình ảnh',
+    saveImage: 'Nhấn và giữ để lưu ảnh',
   },
   info: {
     // 参考サイト
