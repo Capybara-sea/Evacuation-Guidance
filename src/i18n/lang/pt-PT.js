@@ -104,6 +104,8 @@ export default {
       15: 'Eu gostaria de saber que transporte usar',
       //  外貨両替したいです
       16: 'Gostaria de trocar moeda',
+      //  ほかの困りごとがあります
+      17: 'Eu tenho outros problemas'
     },
     need: {
       // 水
@@ -122,6 +124,8 @@ export default {
       7: 'Medicina',
       // ミルク
       8: 'leite seco',
+      // 他
+      9: 'Outras necessidades'
     },
   },
   result: {

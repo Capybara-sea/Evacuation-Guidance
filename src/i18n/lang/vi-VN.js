@@ -103,6 +103,8 @@ export default {
       15: 'Tôi muốn biết phương thức di chuyển',
       //  外貨両替したいです
       16: 'Tôi muốn trao đổi tiền tệ',
+      //  ほかの困りごとがあります
+      17: 'tôi có vấn đề khác'
     },
     need: {
       // 水
@@ -121,6 +123,8 @@ export default {
       7: 'Thuốc',
       // ミルク
       8: 'Sữa',
+      // 他
+      9: 'nhu cầu khác'
     },
   },
   result: {

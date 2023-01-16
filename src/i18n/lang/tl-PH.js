@@ -104,6 +104,8 @@ export default {
       15: 'Gusto ko sanang malaman kung paano lumipat',
       //  外貨両替したいです
       16: 'Gusto kong baguhin ang pera',
+      //  ほかの困りごとがあります
+      17: 'May iba pa akong problema'
     },
     need: {
       // 水
@@ -122,6 +124,8 @@ export default {
       7: 'Gamot',
       // ミルク
       8: 'Gatas ng Sanggol',
+      // 他
+      9: 'Iba pang pangangailangan'
     },
   },
   result: {

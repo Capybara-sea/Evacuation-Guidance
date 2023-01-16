@@ -104,6 +104,8 @@ export default {
       15: 'Ivordliktono, Whitterance Potatous',
       //  外貨両替したいです
       16: 'Ivordlikto Okrensi',
+      //  ほかの困りごとがあります
+      17: 'J’ai d’autres problèmes'
     },
     need: {
       // 水
@@ -122,6 +124,8 @@ export default {
       7: 'Médisyn',
       // ミルク
       8: 'lait en poudre',
+      // 他
+      9: 'Autres besoins'
     },
   },
   result: {
@@ -130,7 +134,7 @@ export default {
     // イメージの生成に失敗しました
     generateFailed: 'Échec de la génération de l`image',
     // 画像を長押しして保存する
-    saveImage: 'Appuyez longuement pour enregistrer l‘image',
+    saveImage: 'Appuyez longuement pour enregistrer l’image',
   },
   info: {
     // 参考サイト

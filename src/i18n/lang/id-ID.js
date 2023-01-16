@@ -101,6 +101,8 @@ export default {
       15: 'Saya ingin mengetahui cara transfer/perjalanan',
       //  外貨両替したいです
       16: 'Saya ingin menukar uang',
+      //  ほかの困りごとがあります
+      17: 'Saya punya masalah lain'
     },
     need: {
       // 水
@@ -119,6 +121,8 @@ export default {
       7: 'Obat',
       // ミルク
       8: 'Susu',
+      // 他
+      9: 'Kebutuhan lain'
     },
   },
   result: {
