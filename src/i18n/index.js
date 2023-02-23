@@ -8,12 +8,11 @@ for (const key in files) {
 }
 
 // messagesフリガナの変換
-const formart = (str) =>
-  str.replaceAll(/\$\(([^\s]+)\s([^\s]+)\)/g, '<ruby>$1<rt>$2</rt></ruby>')
+const format = (str) => str.replaceAll(/\$\(([^\s]+)\s([^\s]+)\)/g, '<ruby>$1<rt>$2</rt></ruby>')
 function forEachObject(obj) {
   for (const key in obj) {
     if (typeof obj[key] == 'object') forEachObject(obj[key])
-    else if (typeof obj[key] == 'string') obj[key] = formart(obj[key])
+    else if (typeof obj[key] == 'string') obj[key] = format(obj[key])
   }
 }
 forEachObject(messages)
